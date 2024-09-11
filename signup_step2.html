@@ -56,24 +56,72 @@
     <div class="layout--login">
         <div class="inner">
             <div class="loginWrap signup">
-                <h2>다음 내용에 동의해주세요</h2>
+                <div class="numRound">2</div>
+                <h2>회사 정보 입력</h2>
 
-                <label class="checkboxLabel checkAll">
-                    <input type="checkbox"><i class="icon"></i>
-                    모두 동의 (필수 및 선택 항목 동의 포함)
-                </label>
-                <div class="detail">
-                    <label class="checkboxLabel">
-                        <input type="checkbox"><i class="icon"></i>
-                        <a data-bs-toggle="modal" data-bs-target="#modal01" class="link">서비스 이용약관 동의</a> (필수)
-                    </label>
-                    <label class="checkboxLabel">
-                        <input type="checkbox"><i class="icon"></i>
-                        <a data-bs-toggle="modal" data-bs-target="#modal01" class="link">개인정보 수집 및 이용 동의</a> (필수)
-                    </label>
+                <div class="formWrap gap16" style="padding-top: 0;">
+                    <div class="labelWrap">
+                        <label class="checkboxLabel">
+                            <input type="checkbox"><i class="icon"></i>
+                            예비창업자입니다.
+                        </label>
+                    </div>
+                    <div class="labelInput">
+                        <div class="label">회사 이름</div>
+                        <div class="flex">
+                            <input type="text" placeholder="회사 이름">
+                        </div>
+                    </div>
+                    <div class="labelInput">
+                        <div class="label">사업자 등록 번호</div>
+                        <div class="flex">
+                            <input type="text" placeholder="‘-’제외 숫자">
+                        </div>
+                    </div>
+                    <div class="labelInput">
+                        <div class="label">사업자 등록증 업로드</div>
+                        <div class="input--file">
+                            <label for="file" class="btn--file">파일선택</label>
+                            <input type="file" id="file">
+                            <input type="text" placeholder="사업자 등록증 업로드" class="value" disabled id="changeFileName">
+                            <button class="delFile" id="delFile">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                    <path d="M12 4L4 12M4 4L12 12" stroke="#36363F" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </button>
+                            <script>
+                                const file = document.querySelector('#file');
+                                const delFile = document.querySelector('#delFile');
+                                const changeFileName = document.querySelector('#changeFileName')
+                                // 첨부 파일 표시
+                                file.addEventListener('change', (e) => {
+                                    changeFileName.value = e.target.files[0].name;
+                                })
+                                // 첨부된 파일 지우기
+                                delFile.addEventListener('click', () => {
+                                    changeFileName.value = '';
+                                })
+                            </script>
+                        </div>
+                    </div>
                 </div>
 
-                <button class="btn--primary">휴대폰 본인인증하기</button>
+                <div class="btnWrap" style="margin-top: 34px;">
+                    <button class="btn--normal" style="flex: 0 0 100px;">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_14071_9744)">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M9.40628 4.46066C9.21884 4.2732 8.91491 4.2732 8.72747 4.46066L5.52747 7.66066C5.43745 7.75068 5.38688 7.87277 5.38688 8.00007C5.38688 8.12738 5.43745 8.24947 5.52747 8.33949L8.72747 11.5394C8.91491 11.727 9.21884 11.727 9.40628 11.5394C9.59374 11.352 9.59374 11.0481 9.40628 10.8607L6.5457 8.00007L9.40628 5.13949C9.59374 4.95203 9.59374 4.64812 9.40628 4.46066Z" fill="#7D7D8B"/>
+                            </g>
+                            <defs>
+                            <clipPath id="clip0_14071_9744">
+                            <rect width="16" height="16" fill="white"/>
+                            </clipPath>
+                            </defs>
+                        </svg>
+                        이전
+                    </button>
+                    <button class="btn--primary" disabled>가입하기</button>
+                </div>
             </div>
         </div>
     </div>
@@ -122,27 +170,6 @@
             <div class="copyright">Copyright ©2023-2024 Seedbridge All Right Reserved.</div>
         </div>
     </footer>
-
-    <!-- Modal -->
-    <div class="dfModal modal fade" id="modal01" tabindex="-1" aria-labelledby="modal01Label" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h1 class="modal-title fs-5" id="modal01Label">Title</h1>
-
-                    <button data-bs-dismiss="modal" aria-label="Close">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                            <path d="M18 6L6 18M6 6L18 18" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <p>Lorem ipsum dolor sit amet consectetur. Tincidunt non odio pellentesque ipsum felis tincidunt odio etiam id. Luctus tincidunt hac quis feugiat tellus sed vulputate lobortis cras. Orci sed curabitur platea sagittis. At sed nisl vel eleifend. Lorem ipsum dolor sit amet consectetur. Tincidunt non odio pellentesque ipsum felis tincidunt odio etiam id. Luctus tincidunt hac quis feugiat tellus sed vulputate lobortis cras. Orci sed curabitur platea sagittis. At sed nisl vel eleifend. Lorem ipsum dolor sit amet consectetur. Tincidunt non odio pellentesque ipsum felis tincidunt odio etiam id. Luctus tincidunt hac quis feugiat tellus sed vulputate lobortis cras. Orci sed curabitur platea sagittis. At sed nisl vel eleifend.</p>
-                    <p>Lorem ipsum dolor sit amet consectetur. Tincidunt non odio pellentesque ipsum felis tincidunt odio etiam id. Luctus tincidunt hac quis feugiat tellus sed vulputate lobortis cras. Orci sed curabitur platea sagittis. At sed nisl vel eleifend. Lorem ipsum dolor sit amet consectetur. Tincidunt non odio pellentesque ipsum felis tincidunt odio etiam id. Luctus tincidunt hac quis feugiat tellus sed vulputate lobortis cras. Orci sed curabitur platea sagittis. At sed nisl vel eleifend. Lorem ipsum dolor sit amet consectetur. Tincidunt non odio pellentesque ipsum felis tincidunt odio etiam id. Luctus tincidunt hac quis feugiat tellus sed vulputate lobortis cras. Orci sed curabitur platea sagittis. At sed nisl vel eleifend.</p>
-                </div>
-            </div>
-        </div>
-    </div>
 
     <!-- BOOTSTRAP -->
     <script src="./bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>

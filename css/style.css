@@ -794,6 +794,9 @@ input {
   border: 1px solid var(--white-E4E4E7, #E4E4E7);
   opacity: 0.5;
 }
+.btn--normal.small {
+  height: 36px;
+}
 
 .component--comment h3 {
   color: #000;
@@ -891,6 +894,23 @@ input {
   flex-direction: column;
   align-items: center;
 }
+.layout--login .loginWrap.password {
+  align-items: flex-start;
+}
+.layout--login .loginWrap.password h2 {
+  margin-bottom: 8px;
+}
+.layout--login .loginWrap.password h3 {
+  color: var(--greyscale-A0A0AB, #A0A0AB);
+  /* subtle */
+  font-family: Pretendard;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 160%; /* 22.4px */
+  letter-spacing: -0.28px;
+  margin-bottom: 34px;
+}
 .layout--login .loginWrap.signup {
   align-items: flex-start;
 }
@@ -964,6 +984,9 @@ input {
   flex-direction: column;
   gap: 12px;
 }
+.layout--login .formWrap.gap16 {
+  gap: 16px;
+}
 .layout--login .linkWrap {
   margin-top: 16px;
   display: flex;
@@ -1005,6 +1028,10 @@ input::placeholder {
 }
 input:focus {
   border: 1px solid var(--color-primary, #93C637);
+}
+input:disabled {
+  background: var(--white-EDEFF3, #EDEFF3);
+  color: var(--greyscale-A0A0AB, #A0A0AB);
 }
 
 .checkboxLabel {
@@ -1075,4 +1102,234 @@ footer .mid div {
 footer .copyright {
   color: var(--greyscale-5B5B67, #5B5B67);
   opacity: 0.5;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.labelInput {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  width: 100%;
+}
+.labelInput input {
+  flex: 1 0 0;
+}
+.labelInput .label {
+  color: var(--greyscale-6E6E7D, #6E6E7D);
+  font-family: Pretendard;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 160%; /* 22.4px */
+  letter-spacing: -0.28px;
+}
+.labelInput .flex {
+  width: 100%;
+}
+.labelInput .mesg--alert {
+  color: var(--error, #FF493E);
+  font-family: Pretendard;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 160%; /* 22.4px */
+  letter-spacing: -0.28px;
+}
+.labelInput .mesg--success {
+  color: var(--complete, #709EF5);
+  font-family: Pretendard;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 160%; /* 22.4px */
+  letter-spacing: -0.28px;
+}
+
+.btnWrap {
+  display: flex;
+  gap: 4px;
+  width: 100%;
+}
+.btnWrap [class*=btn] {
+  margin: 0 !important;
+  flex: 1 0 0;
+  white-space: nowrap;
+}
+
+.numRound {
+  display: flex;
+  width: 24px;
+  height: 24px;
+  padding: 8px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  border-radius: 999px;
+  background: var(--color-ECF4DA, #ECF4DA);
+  color: var(--color-primary, #93C637);
+  text-align: center;
+  font-family: Pretendard;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 160%; /* 22.4px */
+  letter-spacing: -0.28px;
+  margin-bottom: 4px;
+}
+
+.labelWrap {
+  display: flex;
+  padding: 16px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--number-16, 16px);
+  align-self: stretch;
+  border-radius: var(--number-8, 8px);
+  border: 1px solid var(--white-E4E4E7, #E4E4E7);
+  background: var(--white-F7F8F9, #F7F8F9);
+}
+.labelWrap.pd24 {
+  padding: 24px;
+}
+.labelWrap .rowWrap {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  width: 100%;
+  padding: 8px;
+}
+.labelWrap .rows {
+  display: flex;
+  justify-content: space-between;
+  color: var(--greyscale-A0A0AB, #A0A0AB);
+  font-family: Pretendard;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 160%; /* 22.4px */
+  letter-spacing: -0.28px;
+}
+.labelWrap .rows .value {
+  color: var(--greyscale-5B5B67, #5B5B67);
+  font-family: Pretendard;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 160%; /* 22.4px */
+  letter-spacing: -0.28px;
+}
+
+.input--file {
+  border-radius: 4px;
+  border: 1px solid var(--white-E4E4E7, #E4E4E7);
+  background: #FFF;
+  display: flex;
+  height: 36px;
+  padding: 4px 12px;
+  align-items: center;
+  gap: var(--number-8, 8px);
+  align-self: stretch;
+}
+.input--file .delFile {
+  background-color: transparent;
+  border: 0;
+  padding: 0;
+}
+.input--file input[type=file] {
+  display: none;
+}
+.input--file .btn--file {
+  color: var(--color-primary, #93C637);
+  font-family: Pretendard;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px; /* 142.857% */
+}
+.input--file .value {
+  border: 0;
+  padding: 0;
+  height: auto;
+  font-family: Pretendard;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 160%; /* 22.4px */
+  letter-spacing: -0.28px;
+  background-color: transparent;
+  color: var(--greyscale-222228, #222228) !important;
+}
+.input--file .value::-moz-placeholder {
+  color: var(--greyscale-C3C3CA, #C3C3CA);
+}
+.input--file .value::placeholder {
+  color: var(--greyscale-C3C3CA, #C3C3CA);
+}
+
+.section--complated {
+  text-align: center;
+  padding: 240px 0;
+}
+.section--complated h2 {
+  color: var(--greyscale-000000, #000);
+  text-align: center;
+  font-family: Pretendard;
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 160%; /* 44.8px */
+  letter-spacing: -0.56px;
+  margin-bottom: 16px;
+}
+
+.dfModal .modal-dialog {
+  max-width: 100%;
+  width: 720px;
+}
+.dfModal .modal-dialog .modal-content {
+  border-radius: var(--number-16, 16px);
+  padding: var(--spacing-6, 24px);
+}
+.dfModal .modal-dialog .modal-header {
+  padding: 0;
+  border: 0;
+}
+.dfModal .modal-dialog .modal-header h1 {
+  color: var(--text-text-foreground, #09090B);
+  /* large */
+  font-family: Pretendard;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 160%; /* 28.8px */
+  letter-spacing: -0.36px;
+}
+.dfModal .modal-dialog .modal-header button {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  border: 0;
+  background-color: transparent;
+  padding: 0;
+}
+.dfModal .modal-dialog .modal-body {
+  padding: 0;
+  padding-top: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  color: var(--greyscale-A0A0AB, #A0A0AB);
+  /* subtle */
+  font-family: Pretendard;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 160%; /* 22.4px */
+  letter-spacing: -0.28px;
 }/*# sourceMappingURL=style.css.map */
