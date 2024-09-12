@@ -126,7 +126,7 @@ input {
 }
 
 .gnb {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
@@ -173,12 +173,103 @@ input {
   font-weight: 500;
   line-height: 140%; /* 19.6px */
 }
+.gnb .right .alarmMsg {
+  padding: 0;
+  margin-top: 7px !important;
+  position: absolute;
+  top: 37px;
+  left: 24px;
+  z-index: 1;
+  transform: translateX(-100%);
+  width: auto;
+  max-height: 400px;
+  background-color: #fff;
+  border-radius: var(--number-4, 4px);
+  border: 1px solid var(--white-E4E4E7, #E4E4E7);
+  box-shadow: 0px 2px 24px 0px rgba(0, 0, 0, 0.06);
+  overflow: auto;
+}
+.gnb .right .alarmMsg .item {
+  padding: var(--spacing-xl, 16px);
+  border-bottom: 1px solid var(--white-E4E4E7, #E4E4E7);
+  width: -moz-max-content;
+  width: max-content;
+  min-width: 100%;
+  max-width: 320px;
+}
+.gnb .right .alarmMsg .item:hover {
+  background: var(--white-F7F8F9, #F7F8F9);
+}
+.gnb .right .alarmMsg .item:last-child {
+  border-bottom: 0;
+}
+.gnb .right .alarmMsg .item .desc {
+  overflow: hidden;
+  color: var(--greyscale-000000, #000);
+  text-overflow: ellipsis;
+  font-family: Pretendard;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 160%; /* 20.8px */
+  letter-spacing: -0.104px;
+}
+.gnb .right .alarmMsg .item .time {
+  color: var(--greyscale-A0A0AB, #A0A0AB);
+  font-family: Pretendard;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 160%; /* 19.2px */
+  letter-spacing: -0.096px;
+}
+.gnb .right .option {
+  padding: 0;
+  min-width: unset;
+  margin-top: 3px !important;
+  position: absolute;
+  top: 37px;
+  right: 0;
+  z-index: 1;
+  border-radius: var(--number-4, 4px);
+  border: 1px solid var(--white-E4E4E7, #E4E4E7);
+  background: #FFF;
+  box-shadow: 0px 2px 24px 0px rgba(0, 0, 0, 0.06);
+}
+.gnb .right .option .item {
+  cursor: pointer;
+  box-sizing: border-box;
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  height: 40px;
+  min-height: 32px;
+  min-width: 120px;
+  width: auto;
+  padding: 0px 16px;
+  border-bottom: 1px solid var(--white-E4E4E7, #E4E4E7);
+  color: var(--greyscale-000000, #000);
+  font-family: Pretendard;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 160%; /* 20.8px */
+  letter-spacing: -0.104px;
+}
+.gnb .right .option .item:hover {
+  background: var(--white-F7F8F9, #F7F8F9);
+}
+.gnb .right .option .item:last-child {
+  border-bottom: 0;
+}
 
 .lnb {
   position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   padding: 0 12px;
+  padding-top: 64px;
   width: 266px;
   background: #FFF;
   box-shadow: 0px 4px 24px 0px rgba(121, 131, 142, 0.1);
@@ -207,21 +298,19 @@ input {
   letter-spacing: -0.28px;
   transition: 0.2s;
 }
+.lnb ul li a svg circle,
+.lnb ul li a svg rect,
+.lnb ul li a svg path {
+  transition: 0.2s;
+}
 .lnb ul li a:hover {
   background: #F0FAEA;
-  color: var(--primary);
+  color: var(--color-primary, #93C637);
 }
-.lnb ul li a:hover svg circle {
-  transition: 0.2s;
-  stroke: var(--primary);
-}
-.lnb ul li a:hover svg rect {
-  transition: 0.2s;
-  fill: var(--primary);
-}
+.lnb ul li a:hover svg circle,
+.lnb ul li a:hover svg rect,
 .lnb ul li a:hover svg path {
-  transition: 0.2s;
-  stroke: var(--primary);
+  stroke: var(--color-primary, #93C637);
 }
 .lnb ul li.ac a {
   background: var(--primary, #6DBF40);
@@ -243,6 +332,7 @@ input {
 .layout--conetnts {
   position: relative;
   padding-left: 266px;
+  min-height: calc(100vh - 64px);
 }
 
 .contents {
@@ -604,7 +694,7 @@ input {
   bottom: 0;
   left: 50%;
   transform: translateX(-50%);
-  background-color: var(--primary);
+  background-color: var(--color-primary, #93C637);
 }
 .contents .component--graph li {
   display: flex;
@@ -651,7 +741,7 @@ input {
   background: #9CDD79;
 }
 .contents .component--graph li:nth-child(3) .circle {
-  background: var(--primary);
+  background: var(--color-primary, #93C637);
 }
 .contents .component--para h3 {
   color: #000;
@@ -850,7 +940,7 @@ input {
 }
 .component--comment textarea:hover, .component--comment textarea:active, .component--comment textarea:focus {
   outline: none;
-  border: 1px solid var(--primary, var(--primary));
+  border: 1px solid var(--primary, var(--color-primary, #93C637));
 }
 .component--comment textarea:disabled {
   opacity: 0.7;

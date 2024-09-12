@@ -130,8 +130,8 @@ input {
 .gap16 {gap: 16px;}
 
 .gnb {
-	position: absolute;
-	// position: fixed;
+	// position: absolute;
+	position: fixed;
 	// position: sticky;
 	top: 0;
 	left: 0;
@@ -149,6 +149,7 @@ input {
 		display: flex;
 		align-items: center;
 		gap: 16px;
+		// position: relative;
 		.alarm {
 			cursor: pointer;
 		}
@@ -176,14 +177,110 @@ input {
 			font-weight: 500;
 			line-height: 140%; /* 19.6px */
 		}
+		.alarmMsg {
+			padding: 0;
+			margin-top: 7px !important;
+			position: absolute;
+			top: 37px;
+			left: 24px;
+			z-index: 1;
+			transform: translateX(-100%);
+			width: auto;
+			max-height: 400px;
+			background-color: #fff;
+			border-radius: var(--number-4, 4px);
+			border: 1px solid var(--white-E4E4E7, #E4E4E7);
+			box-shadow: 0px 2px 24px 0px rgba(0, 0, 0, 0.06);
+			overflow: auto;
+			// .itemWrap {
+			// 	display: flex;
+			// 	flex-direction: column;
+			// 	gap: 0;
+			// }
+			.item {
+				padding: var(--spacing-xl, 16px);
+				border-bottom: 1px solid var(--white-E4E4E7, #E4E4E7);
+				width: max-content;
+				min-width: 100%;
+				max-width: 320px;
+				&:hover {
+					background: var(--white-F7F8F9, #F7F8F9);
+				}
+				&:last-child {
+					border-bottom: 0;
+				}
+				.desc {
+					overflow: hidden;
+					color: var(--greyscale-000000, #000);
+					text-overflow: ellipsis;
+					font-family: Pretendard;
+					font-size: 13px;
+					font-style: normal;
+					font-weight: 500;
+					line-height: 160%; /* 20.8px */
+					letter-spacing: -0.104px;
+				}
+				.time {
+					color: var(--greyscale-A0A0AB, #A0A0AB);
+					font-family: Pretendard;
+					font-size: 12px;
+					font-style: normal;
+					font-weight: 500;
+					line-height: 160%; /* 19.2px */
+					letter-spacing: -0.096px;
+				}
+			}
+		}
+
+		.option {
+			padding: 0;
+			min-width: unset;
+			margin-top: 3px !important;
+			position: absolute;
+			top: 37px;
+			right: 0;
+			z-index: 1;
+			border-radius: var(--number-4, 4px);
+			border: 1px solid var(--white-E4E4E7, #E4E4E7);
+			background: #FFF;
+			box-shadow: 0px 2px 24px 0px rgba(0, 0, 0, 0.06);
+			.item {
+				cursor: pointer;
+				box-sizing: border-box;
+				white-space: nowrap;
+				display: flex;
+				align-items: center;
+				height: 40px;
+				min-height: 32px;
+				min-width: 120px;
+				width: auto;
+				padding: 0px 16px;				
+				border-bottom: 1px solid var(--white-E4E4E7, #E4E4E7);
+				color: var(--greyscale-000000, #000);
+				font-family: Pretendard;
+				font-size: 13px;
+				font-style: normal;
+				font-weight: 500;
+				line-height: 160%; /* 20.8px */
+				letter-spacing: -0.104px;
+				&:hover {
+					background: var(--white-F7F8F9, #F7F8F9);
+				}
+				&:last-child {
+					border-bottom: 0;
+				}
+			}
+		}
 	}
 }
 
 .lnb {
 	position: absolute;
+	position: fixed;
 	top: 0;
 	left: 0;
 	padding: 0 12px;
+	padding-top: $gnbHeight;
 	width: $lnbWidth;
 	background: #FFF;
 	box-shadow: 0px 4px 24px 0px rgba(121, 131, 142, 0.10);
@@ -211,21 +308,21 @@ input {
 				line-height: 140%; /* 19.6px */
 				letter-spacing: -0.28px;
 				transition: 0.2s;
+				svg {
+					circle,
+					rect,
+					path {
+						transition: 0.2s;
+					}
+				}
 				&:hover {
 					background: #F0FAEA;
-					color: var(--primary);
+					color: var(--color-primary, #93C637);
 					svg {
-						circle {
-							transition: 0.2s;
-							stroke:var(--primary);
-						}
-						rect {
-							transition: 0.2s;
-							fill:var(--primary);
-						}
+						circle,
+						rect,
 						path {
-							transition: 0.2s;
-							stroke:var(--primary);
+							stroke:var(--color-primary, #93C637);
 						}
 					}
 				}
@@ -256,6 +353,7 @@ input {
 .layout--conetnts {
 	position: relative;
 	padding-left: $lnbWidth;
+	min-height: calc(100vh - $gnbHeight);
 }
 .contents {
 	padding: 40px;
@@ -638,7 +736,7 @@ input {
 				bottom: 0;
 				left: 50%;
 				transform: translateX(-50%);
-				background-color: var(--primary);
+				background-color: var(--color-primary, #93C637);
 			}
 		}
 		li {
@@ -683,7 +781,7 @@ input {
 			background: #C2ECAC;
 		}
 		li:nth-child(2) .circle {background: #9CDD79;}
-		li:nth-child(3) .circle {background: var(--primary);}
+		li:nth-child(3) .circle {background: var(--color-primary, #93C637);}
 	}
 
 	.component--para {
@@ -887,9 +985,9 @@ input {
 		&:hover,
 		&:active,
 		&:focus {
-			// outline-color: var(--primary, var(--primary));
+			// outline-color: var(--primary, var(--color-primary, #93C637););
 			outline: none;
-			border: 1px solid var(--primary, var(--primary));
+			border: 1px solid var(--primary, var(--color-primary, #93C637));
 		}
 		&:disabled {
 			opacity: 0.7;
