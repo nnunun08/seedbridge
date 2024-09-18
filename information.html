@@ -18,7 +18,7 @@
 </head>
 <body>
 
-    <!-- <div data-include-path="header.html"></div>  -->
+
     <div class="gnb">
         <a href="#">
             <svg width="141" height="34" viewBox="0 0 141 34" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -94,15 +94,86 @@
     <div class="layout--conetnts">
         <div class="lnb">
             <ul>
-                <li class="ir ac"><a href="#">IR 자료</a></li>
+                <li class="ir"><a href="#">IR 자료</a></li>
                 <li class="company"><a href="#">회사 프로필 관리</a></li>
             </ul>
             <ul>
-                <li class="info"><a href="#">기본 정보 관리</a></li>
+                <li class="info ac"><a href="#">기본 정보 관리</a></li>
                 <li class="payment"><a href="#">결제 내역</a></li>
             </ul>
         </div>
+        <div class="contents">
+            <h2>기본 정보 관리</h2>
+            <div class="pd16">
+                <div class="borderBox">
+                    <div class="tableWrap">
+                        <table>
+                            <tr>
+                                <th>이메일</th>
+                                <td>abc@abc.com</td>
+                            </tr>
+                            <tr>
+                                <th>비밀번호</th>
+                                <td><button class="btn--normal xSmall" data-bs-toggle="modal" data-bs-target="#modal01" >비밀번호 변경</button></td>
+                            </tr>
+                            <tr>
+                                <th>이름</th>
+                                <td>김시드</td>
+                            </tr>
+                            <tr>
+                                <th>휴대폰 번호</th>
+                                <td>01012341234<button class="btn--normal xSmall" style="margin-left: 8px;">휴대폰번호 변경</button></td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div style="padding: 8px; margin-top: 16px;"><a class="lineBtn">회원탈퇴</a></div>
+                </div>
+            </div>
+        </div>
 
+    </div>
+
+    <!-- Modal -->
+    <div class="dfModal modal fade" id="modal01" tabindex="-1" aria-labelledby="modal01Label" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" style="width: 460px;">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title" id="modal01Label">비밀번호 변경하기</h1>
+
+                    <button data-bs-dismiss="modal" aria-label="Close">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path d="M18 6L6 18M6 6L18 18" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="labelInput">
+                        <div class="label">현재 비밀번호</div>
+                        <div class="flex">
+                            <input type="password" placeholder="비밀번호">
+                        </div>
+                        <!-- <div class="mesg--alert">현재 비밀번호와 일치하지 않습니다.</div> -->
+                    </div>
+                    <div class="labelInput">
+                        <div class="label">변경할 비밀번호</div>
+                        <div class="flex">
+                            <input type="password" placeholder="비밀번호">
+                        </div>
+                        <!-- <div class="mesg--alert">비밀번호는 영문 소문자, 숫자 포함 8~20자로 설정해 주세요.</div> -->
+                    </div>
+                    <div class="labelInput">
+                        <div class="label">변경할 비밀번호 확인</div>
+                        <div class="flex">
+                            <input type="password" placeholder="비밀번호">
+                        </div>
+                        <!-- <div class="mesg--alert">비밀번호가 일치하지 않습니다.</div> -->
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn--primary">변경하기</button>
+                </div>
+            </div>
+        </div>
     </div>
     
 

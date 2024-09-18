@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>시드브릿지 | 예비 · 초기 창업자 맞춤 솔루션</title>
+    <!-- SLICK -->
+    <link rel="stylesheet" href="./css/slick.css">
+    <link rel="stylesheet" href="./css/slick-theme.css">
+    <!-- BOOTSTRAP -->
+    <link rel="stylesheet" href="./bootstrap-5.3.3-dist/css/bootstrap.min.css"  integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="./css/style.css">
+
+    <!-- 퍼블리싱을 위한 include js -->
+    <script src="./js/include.js"></script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+
+
+</head>
+<body>
+
+
+    <div class="gnb">
+        <a href="#">
+            <svg width="141" height="34" viewBox="0 0 141 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#clip0_14042_5544)">
+                <path d="M39.0183 13.8405H37.2024C37.0155 12.4302 35.7237 11.3523 33.6193 11.3523C31.515 11.3523 30.3044 12.2138 30.3044 13.4118C30.3044 14.7902 31.5475 15.3872 34.4277 15.9842C37.7427 16.6814 39.0711 17.9435 39.0711 19.9148C39.0711 22.3029 36.6986 23.7653 33.7046 23.7653C30.5603 23.7653 28.2894 22.0745 28.1025 19.5021H29.9184C30.1053 21.1129 31.5678 22.2548 33.8224 22.2548C35.8415 22.2548 37.2715 21.3412 37.2715 20.015C37.2715 18.5365 36.0446 17.9395 33.1156 17.3264C30.0688 16.6974 28.521 15.6156 28.521 13.4118C28.521 11.2081 30.7269 9.86182 33.7046 9.86182C36.6824 9.86182 38.8517 11.5206 39.0224 13.8446L39.0183 13.8405Z" fill="#231815"/>
+                <path d="M40.7163 18.7167C40.7163 15.8638 42.7353 13.7402 45.5465 13.7402C48.3577 13.7402 50.3565 15.8638 50.3565 18.7167C50.3565 18.933 50.3565 19.1814 50.324 19.4138H42.451C42.6378 21.0406 43.8322 22.2506 45.5465 22.2506C46.8587 22.2506 47.8865 21.6536 48.2399 20.8723H50.0071C49.4871 22.5151 47.7524 23.6931 45.5506 23.6931C42.7394 23.6931 40.7204 21.5695 40.7204 18.7167H40.7163ZM45.5465 15.1827C43.8119 15.1827 42.6378 16.3767 42.451 18.0195H48.6584C48.4552 16.3607 47.2771 15.1827 45.5465 15.1827Z" fill="#231815"/>
+                <path d="M52.0586 18.7167C52.0586 15.8638 54.0776 13.7402 56.8888 13.7402C59.7 13.7402 61.6987 15.8638 61.6987 18.7167C61.6987 18.933 61.6987 19.1814 61.6662 19.4138H53.7933C53.9801 21.0406 55.1745 22.2506 56.8888 22.2506C58.201 22.2506 59.2288 21.6536 59.5822 20.8723H61.3494C60.8294 22.5151 59.0947 23.6931 56.8929 23.6931C54.0817 23.6931 52.0627 21.5695 52.0627 18.7167H52.0586ZM56.8848 15.1827C55.1501 15.1827 53.9761 16.3767 53.7892 18.0195H59.9966C59.7935 16.3607 58.6154 15.1827 56.8848 15.1827Z" fill="#231815"/>
+                <path d="M63.397 18.717C63.397 15.8802 65.4322 13.7406 68.1581 13.7406C69.909 13.7406 71.0872 14.57 71.5746 15.3833V9.75781H73.3093V23.465H71.5746V22.0546C71.0872 22.868 69.909 23.6974 68.1581 23.6974C65.4322 23.6974 63.397 21.5578 63.397 18.721V18.717ZM71.6071 18.717C71.6071 16.7416 70.2625 15.2471 68.3085 15.2471C66.3544 15.2471 65.0951 16.7416 65.0951 18.717C65.0951 20.6923 66.3747 22.1868 68.3085 22.1868C70.2422 22.1868 71.6071 20.6923 71.6071 18.717Z" fill="#231815"/>
+                <path d="M80.5203 22.0546V23.465H78.7856V9.75781H80.5203V15.3833C81.0078 14.57 82.1859 13.7406 83.9368 13.7406C86.6627 13.7406 88.698 15.8802 88.698 18.717C88.698 21.5538 86.6627 23.6934 83.9368 23.6934C82.1859 23.6934 81.0078 22.864 80.5203 22.0506V22.0546ZM86.9999 18.717C86.9999 16.7416 85.7202 15.2471 83.7865 15.2471C81.8528 15.2471 80.4878 16.7416 80.4878 18.717C80.4878 20.6923 81.8325 22.1868 83.7865 22.1868C85.7405 22.1868 86.9999 20.6923 86.9999 18.717Z" fill="#231815"/>
+                <path d="M92.6546 13.9726V15.4311C93.0771 14.7179 94.2349 13.7402 96.1198 13.7402C96.7089 13.7402 97.0948 13.7883 97.432 13.9045V15.5313C97.0623 15.367 96.5911 15.2668 96.002 15.2668C94.0358 15.2668 92.6546 16.8255 92.6546 18.5524V23.4647H90.9199V13.9726H92.6546Z" fill="#231815"/>
+                <path d="M101.165 10.7193C101.165 11.3684 100.678 11.8492 100.004 11.8492C99.3292 11.8492 98.8579 11.3684 98.8579 10.7193C98.8579 10.0702 99.3454 9.58936 100.004 9.58936C100.662 9.58936 101.165 10.0702 101.165 10.7193ZM99.1463 23.4809V13.9728H100.881V23.4809H99.1463Z" fill="#231815"/>
+                <path d="M103.099 18.717C103.099 15.8802 105.134 13.7406 107.86 13.7406C109.611 13.7406 110.789 14.57 111.277 15.3833V9.75781H113.011V23.465H111.277V22.0546C110.789 22.868 109.611 23.6974 107.86 23.6974C105.134 23.6974 103.099 21.5578 103.099 18.721V18.717ZM111.309 18.717C111.309 16.7416 109.965 15.2471 108.011 15.2471C106.057 15.2471 104.797 16.7416 104.797 18.717C104.797 20.6923 106.077 22.1868 108.011 22.1868C109.944 22.1868 111.309 20.6923 111.309 18.717Z" fill="#231815"/>
+                <path d="M115.887 24.3583H117.655C117.858 25.372 118.715 26.2495 120.45 26.2495C122.184 26.2495 123.411 25.0875 123.411 23.2284V21.9182C122.924 22.7316 121.745 23.561 119.995 23.561C117.269 23.561 115.233 21.4534 115.233 18.6647C115.233 15.8759 117.269 13.7363 119.995 13.7363C121.745 13.7363 122.924 14.5657 123.411 15.3791V13.9687H125.142V23.2444C125.142 25.8649 123.208 27.724 120.45 27.724C117.691 27.724 116.229 26.1493 115.892 24.3543L115.887 24.3583ZM123.44 18.6687C123.44 16.7254 122.095 15.2509 120.141 15.2509C118.187 15.2509 116.927 16.7294 116.927 18.6687C116.927 20.608 118.207 22.0865 120.141 22.0865C122.075 22.0865 123.44 20.608 123.44 18.6687Z" fill="#231815"/>
+                <path d="M127.36 18.7167C127.36 15.8638 129.379 13.7402 132.186 13.7402C134.993 13.7402 136.996 15.8638 136.996 18.7167C136.996 18.933 136.996 19.1814 136.963 19.4138H129.09C129.277 21.0406 130.472 22.2506 132.186 22.2506C133.498 22.2506 134.526 21.6536 134.879 20.8723H136.647C136.127 22.5151 134.392 23.6931 132.19 23.6931C129.379 23.6931 127.364 21.5695 127.364 18.7167H127.36ZM132.19 15.1827C130.455 15.1827 129.281 16.3767 129.095 18.0195H135.302C135.099 16.3607 133.921 15.1827 132.19 15.1827Z" fill="#231815"/>
+                <path d="M20.9444 12.9752C21.0744 12.9752 21.2044 12.9752 21.3303 12.9672C20.79 9.03655 17.3735 6.00342 13.238 6.00342C13.108 6.00342 12.978 6.00342 12.8521 6.01143C13.3964 9.94208 16.8129 12.9752 20.9485 12.9752H20.9444Z" fill="#67A942"/>
+                <path d="M20.9446 20.5001C21.0746 20.5001 21.2046 20.5001 21.3305 20.4921C20.7861 16.5615 17.3696 13.5283 13.2341 13.5283C13.1041 13.5283 12.9741 13.5283 12.8481 13.5363C13.3925 17.467 16.809 20.5001 20.9446 20.5001Z" fill="#67A942"/>
+                <path d="M12.0964 20.4997C12.2264 20.4997 12.3564 20.4997 12.4824 20.4917C11.938 16.5611 8.52149 13.5279 4.38593 13.5279C4.25593 13.5239 4.13 13.5279 4 13.536C4.54437 17.4666 7.96087 20.4997 12.0964 20.4997Z" fill="#67A942"/>
+                <path d="M12.0964 28.0408C12.2264 28.0408 12.3564 28.0408 12.4824 28.0327C11.938 24.1021 8.52149 21.069 4.38593 21.069C4.25593 21.0649 4.13 21.069 4 21.077C4.54437 25.0076 7.96087 28.0408 12.0964 28.0408Z" fill="#67A942"/>
+                <path d="M12.0964 6.00342C12.2264 6.00342 12.3564 6.00342 12.4824 6.01143C11.9421 9.94609 8.52555 12.9752 4.38593 12.9752C4.25593 12.9752 4.12594 12.9752 4 12.9672C4.54437 9.03655 7.96087 6.00342 12.0964 6.00342Z" fill="#67A942"/>
+                <path d="M20.9446 21.0649C21.0746 21.0649 21.2046 21.0649 21.3305 21.073C20.7861 25.0036 17.3696 28.0367 13.2341 28.0367C13.1041 28.0367 12.9741 28.0367 12.8481 28.0287C13.3925 24.0981 16.809 21.0649 20.9446 21.0649Z" fill="#67A942"/>
+                </g>
+                <defs>
+                <clipPath id="clip0_14042_5544">
+                <rect width="133" height="22.0373" fill="white" transform="translate(4 6.00342)"/>
+                </clipPath>
+                </defs>
+            </svg>
+        </a>
+    
+        <div class="right">
+
+            <div class="btn-group">
+                <div data-bs-toggle="dropdown" aria-expanded="false">
+                    <svg class="alarm" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <mask id="path-1-inside-1_13829_65361" fill="white">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M12 3.8125C8.65641 3.8125 5.94592 6.523 5.94592 9.86656V14.2782C4.87592 15.3702 4.21619 16.8656 4.21619 18.5152H19.7838C19.7838 16.8656 19.124 15.3702 18.054 14.2782V9.86655C18.054 6.52299 15.3435 3.8125 12 3.8125Z"/>
+                        </mask>
+                        <path d="M5.94592 14.2782L7.01728 15.3281L7.44592 14.8907V14.2782H5.94592ZM4.21619 18.5152H2.71619V20.0152H4.21619V18.5152ZM19.7838 18.5152V20.0152H21.2838V18.5152H19.7838ZM18.054 14.2782H16.554V14.8907L16.9827 15.3281L18.054 14.2782ZM7.44592 9.86656C7.44592 7.35142 9.48484 5.3125 12 5.3125V2.3125C7.82798 2.3125 4.44592 5.69457 4.44592 9.86656H7.44592ZM7.44592 14.2782V9.86656H4.44592V14.2782H7.44592ZM5.71619 18.5152C5.71619 17.2738 6.21089 16.151 7.01728 15.3281L4.87455 13.2284C3.54095 14.5893 2.71619 16.4574 2.71619 18.5152H5.71619ZM19.7838 17.0152H4.21619V20.0152H19.7838V17.0152ZM16.9827 15.3281C17.7891 16.151 18.2838 17.2738 18.2838 18.5152H21.2838C21.2838 16.4575 20.459 14.5893 19.1254 13.2284L16.9827 15.3281ZM16.554 9.86655V14.2782H19.554V9.86655H16.554ZM12 5.3125C14.5151 5.3125 16.554 7.35142 16.554 9.86655H19.554C19.554 5.69456 16.172 2.3125 12 2.3125V5.3125Z" fill="#222222" mask="url(#path-1-inside-1_13829_65361)"/>
+                        <path d="M13.9994 18V18.6875C13.9994 19.0853 13.7887 19.4669 13.4136 19.7482C13.0385 20.0295 12.5298 20.1875 11.9994 20.1875C11.469 20.1875 10.9602 20.0295 10.5852 19.7482C10.2101 19.4669 9.99939 19.0853 9.99939 18.6875V18" stroke="#222222" stroke-width="1.5"/>
+                    </svg>
+                </div>
+                <div class="alarmMsg dropdown-menu dropdown-menu-end">
+                    <div class="item">
+                        <div class="desc">[미래에셋 제출용]에 대해 요청한 평가가 완료되었습니다. 평가가 완료되었습니다.</div>
+                        <div class="time">2024-08-08 19:24</div>
+                    </div>
+                    <div class="item">
+                        <div class="desc">[미래에셋 제출용]</div>
+                        <div class="time">2024-08-08 19:24</div>
+                    </div>
+                    <div class="item">
+                        <div class="desc">[미래에셋 제출용]에 대해 요청한 평가가 완료되었습니다.</div>
+                        <div class="time">2024-08-08 19:24</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="btn-group">
+                <div class="profile" data-bs-toggle="dropdown" aria-expanded="false">
+                    <div class="imgWrap">
+                        <img src="./img/dummy_profile.png" alt="img">
+                    </div>
+                    <div class="name">빠더너스</div>
+                </div>
+                <div class="option dropdown-menu dropdown-menu-end">
+                    <div class="item">로그아웃</div>
+                </div>
+            </div>
+
+        </div>  
+    </div>
+
+    <div class="layout--conetnts">
+        <div class="lnb">
+            <ul>
+                <li class="ir"><a href="#">IR 평가</a></li>
+                <li class="company"><a href="#">프로필 관리</a></li>
+            </ul>
+            <ul>
+                <li class="info"><a href="#">기본 정보 관리</a></li>
+                <li class="payment ac"><a href="#">정산 내역</a></li>
+            </ul>
+        </div>
+
+        <div class="contents">
+            <h2 style="margin-bottom: 30px;">정산 내역</h2>
+            <table class="table">
+                <tr>
+                    <th>심사 요청일</th>
+                    <td>
+                        <div class="flex gap8">
+                            <input class="flatpickr" type="text" placeholder="2024-04-01 ~ 2024-07-30" style="width: 213px;">
+                            <div class="radioTab">
+                                <label><input type="radio" name="radioTab" checked>1개월</label>
+                                <label><input type="radio" name="radioTab">3개월</label>
+                                <label><input type="radio" name="radioTab">6개월</label>
+                                <label><input type="radio" name="radioTab">12개월</label>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th>상태</th>
+                    <td>
+                        <div class="flex gap16">
+                            <label class="checkboxLabel"><input type="checkbox" checked><i class="icon"></i>수락대기</label>
+                            <label class="checkboxLabel"><input type="checkbox"><i class="icon"></i>평가중</label>
+                            <label class="checkboxLabel"><input type="checkbox"><i class="icon"></i>평가완료</label>
+                            <label class="checkboxLabel"><input type="checkbox"><i class="icon"></i>평가거절</label>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th>검색</th>
+                    <td>
+                        <div class="flex gap8">
+                            <select>
+                                <option value="기업명">기업명</option>
+                            </select>
+                            <input type="text" style="width: 380px;">
+                        </div>
+                    </td>
+                </tr>
+            </table>
+
+            <div class="flex center gap8" style="margin-bottom: 40px;">
+                <button class="btn--normal">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M14 8C14 6.4087 13.3679 4.88258 12.2426 3.75736C11.1174 2.63214 9.5913 2 8 2C6.32263 2.00631 4.71265 2.66082 3.50667 3.82667L2 5.33333M2 5.33333V2M2 5.33333H5.33333M2 8C2 9.5913 2.63214 11.1174 3.75736 12.2426C4.88258 13.3679 6.4087 14 8 14C9.67737 13.9937 11.2874 13.3392 12.4933 12.1733L14 10.6667M14 10.6667H10.6667M14 10.6667V14" stroke="#36363F" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    초기화
+                </button>
+                <button class="btn--primary" style="width: 100px;">조회</button>
+            </div>    
+            <div class="component--grid">
+                <table>
+                    <colgroup>
+                        <col style="width: 57px">
+                        <col style="width: 94px">
+                        <col style="width: 469px">
+                        <col style="width: 120px">
+                        <col style="width: 120px">
+                        <col style="width: 120px">
+                        <col style="width: 120px">
+                    </colgroup>
+                    <tbody><tr>
+                        <th>번호</th>
+                        <th>상태</th>
+                        <th>제목</th>
+                        <th>기업명</th>
+                        <th>평가 완료일</th>
+                        <th>상품</th>
+                        <th>정산 금액</th>
+                    </tr>
+                    <tr>
+                        <td>00</td>
+                        <td><div class="status--stay" style="width: 60px;">정산대기</div></td>
+                        <td>
+                            <a href="#">
+                                미래에셋벤처투자 제출용 V2
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" style="margin-left: 4px;">
+                                    <path d="M13.5 9.16667V12.1667C13.5 12.5203 13.3595 12.8594 13.1095 13.1095C12.8594 13.3595 12.5203 13.5 12.1667 13.5H3.83333C3.47971 13.5 3.14057 13.3595 2.89052 13.1095C2.64048 12.8594 2.5 12.5203 2.5 12.1667V3.83333C2.5 3.47971 2.64048 3.14057 2.89052 2.89052C3.14057 2.64048 3.47971 2.5 3.83333 2.5H6.83333M9.5 2.5H13.5M13.5 2.5V6.5M13.5 2.5L7.16667 8.83333" stroke="#36363F" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </a>
+                        </td>
+                        <td>빠더너스</td>
+                        <td>2024-07-06</td>
+                        <td>베이직</td>
+                        <td>89,000원</td>
+                    </tr>
+                    <tr>
+                        <td>00</td>
+                        <td><div class="status--complate" style="width: 60px;">정산완료</div></td>
+                        <td>
+                            <a href="#">
+                                미래에셋벤처투자 제출용 V2
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" style="margin-left: 4px;">
+                                    <path d="M13.5 9.16667V12.1667C13.5 12.5203 13.3595 12.8594 13.1095 13.1095C12.8594 13.3595 12.5203 13.5 12.1667 13.5H3.83333C3.47971 13.5 3.14057 13.3595 2.89052 13.1095C2.64048 12.8594 2.5 12.5203 2.5 12.1667V3.83333C2.5 3.47971 2.64048 3.14057 2.89052 2.89052C3.14057 2.64048 3.47971 2.5 3.83333 2.5H6.83333M9.5 2.5H13.5M13.5 2.5V6.5M13.5 2.5L7.16667 8.83333" stroke="#36363F" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </a>
+                        </td>
+                        <td>빠더너스</td>
+                        <td>2024-07-06</td>
+                        <td>베이직</td>
+                        <td>89,000원</td>
+                    </tr>
+                </tbody></table>
+            </div>
+
+            <nav aria-label="Page navigation">
+                <ul class="pagination">
+                  <li class="page-item">
+                    <a class="page-link" href="#" aria-label="Previous">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                            <mask id="path-1-inside-1_14021_71324" fill="white">
+                              <path fill-rule="evenodd" clip-rule="evenodd" d="M9.40612 4.46054C9.59358 4.64799 9.59358 4.95191 9.40612 5.13937L6.54553 7.99995L9.40612 10.8605C9.59358 11.048 9.59358 11.3519 9.40612 11.5394C9.21868 11.7268 8.91475 11.7268 8.72731 11.5394L5.52731 8.33937C5.43729 8.24934 5.38672 8.12725 5.38672 7.99995C5.38672 7.87265 5.43729 7.75055 5.52731 7.66054L8.72731 4.46054C8.91475 4.27308 9.21868 4.27308 9.40612 4.46054Z"/>
+                            </mask>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M9.40612 4.46054C9.59358 4.64799 9.59358 4.95191 9.40612 5.13937L6.54553 7.99995L9.40612 10.8605C9.59358 11.048 9.59358 11.3519 9.40612 11.5394C9.21868 11.7268 8.91475 11.7268 8.72731 11.5394L5.52731 8.33937C5.43729 8.24934 5.38672 8.12725 5.38672 7.99995C5.38672 7.87265 5.43729 7.75055 5.52731 7.66054L8.72731 4.46054C8.91475 4.27308 9.21868 4.27308 9.40612 4.46054Z" fill="black"/>
+                            <path d="M9.40612 4.46054L8.699 5.16762L8.69902 5.16765L9.40612 4.46054ZM9.40612 5.13937L10.1132 5.84647V5.84647L9.40612 5.13937ZM6.54553 7.99995L5.83843 7.29285L5.13132 7.99995L5.83843 8.70706L6.54553 7.99995ZM9.40612 10.8605L8.69901 11.5677L8.6991 11.5677L9.40612 10.8605ZM9.40612 11.5394L10.1132 12.2465L10.1133 12.2464L9.40612 11.5394ZM8.72731 11.5394L8.0202 12.2465L8.02026 12.2465L8.72731 11.5394ZM5.52731 8.33937L4.82016 9.04643L4.8202 9.04647L5.52731 8.33937ZM5.52731 7.66054L6.23441 8.36765H6.23441L5.52731 7.66054ZM8.72731 4.46054L9.43441 5.16765L9.43443 5.16762L8.72731 4.46054ZM8.69902 5.16765C8.49595 4.96458 8.49595 4.63533 8.69902 4.43226L10.1132 5.84647C10.6912 5.26849 10.6912 4.33141 10.1132 3.75343L8.69902 5.16765ZM8.69902 4.43226L5.83843 7.29285L7.25264 8.70706L10.1132 5.84647L8.69902 4.43226ZM5.83843 8.70706L8.69901 11.5677L10.1132 10.1534L7.25264 7.29285L5.83843 8.70706ZM8.6991 11.5677C8.49581 11.3645 8.4961 11.0353 8.69889 10.8324L10.1133 12.2464C10.6911 11.6685 10.6913 10.7314 10.1131 10.1534L8.6991 11.5677ZM8.69908 10.8322C8.90214 10.6292 9.23129 10.6292 9.43435 10.8322L8.02026 12.2465C8.59821 12.8244 9.53521 12.8244 10.1132 12.2465L8.69908 10.8322ZM9.43441 10.8323L6.23441 7.63226L4.8202 9.04647L8.0202 12.2465L9.43441 10.8323ZM6.23445 7.6323C6.33193 7.72978 6.38672 7.86202 6.38672 7.99995H4.38672C4.38672 8.39248 4.54265 8.76889 4.82016 9.04643L6.23445 7.6323ZM6.38672 7.99995C6.38672 8.13785 6.33194 8.27012 6.23441 8.36765L4.8202 6.95343C4.54264 7.23099 4.38672 7.60744 4.38672 7.99995H6.38672ZM6.23441 8.36765L9.43441 5.16765L8.0202 3.75343L4.8202 6.95343L6.23441 8.36765ZM9.43443 5.16762C9.23135 5.37072 8.90208 5.37072 8.699 5.16762L10.1132 3.75345C9.53527 3.17544 8.59815 3.17544 8.02018 3.75345L9.43443 5.16762Z" fill="black" mask="url(#path-1-inside-1_14021_71324)"/>
+                        </svg>
+                    </a>
+                  </li>
+                  <li class="page-item active" aria-current="page"><a class="page-link" href="#">1</a></li>
+                  <li class="page-item">
+                    <a class="page-link" href="#">2</a>
+                  </li>
+                  <li class="page-item"><a class="page-link" href="#">3</a></li>
+                  <li class="page-item">
+                    <a class="page-link" href="#" aria-label="Next">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                            <mask id="path-1-inside-1_14021_71326" fill="white">
+                              <path fill-rule="evenodd" clip-rule="evenodd" d="M6.59388 4.46054C6.40642 4.64799 6.40642 4.95191 6.59388 5.13937L9.45447 7.99995L6.59388 10.8605C6.40642 11.048 6.40642 11.3519 6.59388 11.5394C6.78132 11.7268 7.08525 11.7268 7.27269 11.5394L10.4727 8.33937C10.5627 8.24934 10.6133 8.12725 10.6133 7.99995C10.6133 7.87265 10.5627 7.75055 10.4727 7.66054L7.27269 4.46054C7.08525 4.27308 6.78132 4.27308 6.59388 4.46054Z"/>
+                            </mask>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M6.59388 4.46054C6.40642 4.64799 6.40642 4.95191 6.59388 5.13937L9.45447 7.99995L6.59388 10.8605C6.40642 11.048 6.40642 11.3519 6.59388 11.5394C6.78132 11.7268 7.08525 11.7268 7.27269 11.5394L10.4727 8.33937C10.5627 8.24934 10.6133 8.12725 10.6133 7.99995C10.6133 7.87265 10.5627 7.75055 10.4727 7.66054L7.27269 4.46054C7.08525 4.27308 6.78132 4.27308 6.59388 4.46054Z" fill="black"/>
+                            <path d="M6.59388 4.46054L7.301 5.16762L7.30098 5.16765L6.59388 4.46054ZM6.59388 5.13937L5.88677 5.84647V5.84647L6.59388 5.13937ZM9.45447 7.99995L10.1616 7.29285L10.8687 7.99995L10.1616 8.70706L9.45447 7.99995ZM6.59388 10.8605L7.30099 11.5677L7.3009 11.5677L6.59388 10.8605ZM6.59388 11.5394L5.88683 12.2465L5.88665 12.2464L6.59388 11.5394ZM7.27269 11.5394L7.9798 12.2465L7.97974 12.2465L7.27269 11.5394ZM10.4727 8.33937L11.1798 9.04643L11.1798 9.04647L10.4727 8.33937ZM10.4727 7.66054L9.76559 8.36765H9.76559L10.4727 7.66054ZM7.27269 4.46054L6.56559 5.16765L6.56557 5.16762L7.27269 4.46054ZM7.30098 5.16765C7.50405 4.96458 7.50405 4.63533 7.30098 4.43226L5.88677 5.84647C5.30879 5.26849 5.30879 4.33141 5.88677 3.75343L7.30098 5.16765ZM7.30098 4.43226L10.1616 7.29285L8.74736 8.70706L5.88677 5.84647L7.30098 4.43226ZM10.1616 8.70706L7.30099 11.5677L5.88677 10.1534L8.74736 7.29285L10.1616 8.70706ZM7.3009 11.5677C7.50419 11.3645 7.5039 11.0353 7.30111 10.8324L5.88665 12.2464C5.30894 11.6685 5.30865 10.7314 5.88685 10.1534L7.3009 11.5677ZM7.30092 10.8322C7.09786 10.6292 6.76871 10.6292 6.56565 10.8322L7.97974 12.2465C7.40179 12.8244 6.46479 12.8244 5.88683 12.2465L7.30092 10.8322ZM6.56559 10.8323L9.76559 7.63226L11.1798 9.04647L7.9798 12.2465L6.56559 10.8323ZM9.76555 7.6323C9.66807 7.72978 9.61328 7.86202 9.61328 7.99995H11.6133C11.6133 8.39248 11.4573 8.76889 11.1798 9.04643L9.76555 7.6323ZM9.61328 7.99995C9.61328 8.13785 9.66806 8.27012 9.76559 8.36765L11.1798 6.95343C11.4574 7.23099 11.6133 7.60744 11.6133 7.99995H9.61328ZM9.76559 8.36765L6.56559 5.16765L7.9798 3.75343L11.1798 6.95343L9.76559 8.36765ZM6.56557 5.16762C6.76865 5.37072 7.09792 5.37072 7.301 5.16762L5.88675 3.75345C6.46473 3.17544 7.40185 3.17544 7.97982 3.75345L6.56557 5.16762Z" fill="black" mask="url(#path-1-inside-1_14021_71326)"/>
+                        </svg>
+                    </a>
+                  </li>
+                </ul>
+              </nav>
+        </div>
+
+    </div>
+
+    <!-- confirm -->
+    <div class="dfModal modal fade" id="modal01" tabindex="-1" aria-labelledby="modal01Label" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" style="width: 512px;">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title" id="modal01Label">결제를 취소하시겠습니까?</h1>
+                </div>
+                <div class="modal-body" style="padding-top: 4px;">
+                    <p>삭제시 평가내역도 함게 삭제되며, 복구가 불가능합니다.</p>
+                </div>
+                <div class="modal-footer" style="border-top: 0;">
+                    <button class="btn--normal" data-bs-dismiss="modal" aria-label="Close">뒤로</button>
+                    <button class="btn--primary">결제 취소하기</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- confirm -->
+    <div class="dfModal modal fade" id="modal02" tabindex="-1" aria-labelledby="modal02Label" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" style="width: 512px;">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title" id="modal02Label">주문을 취소하시겠습니까?</h1>
+                </div>
+                <div class="modal-body" style="padding-top: 4px;">
+                    <p>1:1 상담을 통해 주문 취소가 가능합니다.</p>
+                </div>
+                <div class="modal-footer" style="border-top: 0;">
+                    <button class="btn--normal" data-bs-dismiss="modal" aria-label="Close">뒤로</button>
+                    <button class="btn--primary">1:1 상담하러가기</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 입금정보 -->
+    <div class="dfModal modal fade" id="modal03" tabindex="-1" aria-labelledby="modal03Label" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" style="width: 460px;">
+            <div class="modal-content">
+                <div class="modal-header" style="justify-content: center;">
+                    <h1 class="modal-title" id="modal03Label">입금정보</h1>
+
+                    <button data-bs-dismiss="modal" aria-label="Close">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path d="M18 6L6 18M6 6L18 18" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                </div>
+                
+                <div class="infoWrap">
+                    <div class="flex between">
+                        <div class="key">계좌번호</div>
+                        <div class="value">우리은행 1000-1000-10000</div>
+                    </div>
+                    <div class="flex between">
+                        <div class="key">예금주</div>
+                        <div class="value">시드브릿지</div>
+                    </div>
+                </div>
+                <div class="flex between">
+                    <div class="key">입금 마감일시</div>
+                    <div class="value">2024-08-11 23:59:59</div>
+                </div>
+                <div class="infoMsg">입금 마감일시까지 입금하지 않으시면 자동으로 취소됩니다.</div>
+
+                <div class="modal-footer" style="border-top: 0;">
+                    <button class="btn--normal" style="width: 100%;" data-bs-dismiss="modal" aria-label="Close">닫기</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 환불내역 -->
+    <div class="dfModal modal fade" id="modal04" tabindex="-1" aria-labelledby="modal04Label" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" style="width: 480px;">
+            <div class="modal-content">
+                <div class="modal-header" style="justify-content: center;">
+                    <h1 class="modal-title" id="modal04Label">환불내역</h1>
+
+                    <button data-bs-dismiss="modal" aria-label="Close">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path d="M18 6L6 18M6 6L18 18" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                </div>
+                
+                <div class="infoWrap">
+                    <div class="flex between">
+                        <div class="key">환불 금액</div>
+                        <div class="value">100,000원</div>
+                    </div>
+                    <div class="flex between">
+                        <div class="key">환불 수단</div>
+                        <div class="value">환불 계좌로 입금</div>
+                    </div>
+                </div>
+                <div class="flex between">
+                    <div class="key">환불 처리일</div>
+                    <div class="value">2024-08-09</div>
+                </div>
+                <div class="infoMsg">환불은 처리일로부터 영업일 기준 3~7일 이내에 지정된 수단으로 이루어집니다.</div>
+
+                <div class="modal-footer" style="border-top: 0;">
+                    <button class="btn--normal" style="width: 100%;" data-bs-dismiss="modal" aria-label="Close">닫기</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+    <!-- BOOTSTRAP -->
+    <script src="./bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    
+    <!-- SLICK -->
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script src="./js/slick.min.js"></script>
+    <script>
+        $('.imgSlide').slick(
+            {
+                dots: true,
+                infinite: true,
+            }
+        );
+    </script>
+
+    <script>
+        // commonjs
+        const flatpickr = require("flatpickr");
+
+        // es modules are recommended, if available, especially for typescript
+        import flatpickr from "flatpickr";
+
+        // If using flatpickr in a framework, its recommended to pass the element directly
+        flatpickr(element, {});
+
+        // Otherwise, selectors are also supported
+        flatpickr("#myID", {});
+        flatpickr(".flatpickr", {
+            enableTime: true,
+            dateFormat: "Y-m-d H:i",
+        });
+
+        // creates multiple instances
+        flatpickr(".anotherSelector");
+    </script>
+</body>
+</html>

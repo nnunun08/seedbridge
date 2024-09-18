@@ -56,24 +56,152 @@
     <div class="layout--login">
         <div class="inner">
             <div class="loginWrap signup">
-                <h2>다음 내용에 동의해주세요</h2>
+                <div class="numRound">2</div>
+                <h2>심사역 정보 입력</h2>
 
-                <label class="checkboxLabel checkAll">
-                    <input type="checkbox"><i class="icon"></i>
-                    모두 동의 (필수 및 선택 항목 동의 포함)
-                </label>
-                <div class="detail">
-                    <label class="checkboxLabel">
-                        <input type="checkbox"><i class="icon"></i>
-                        <a data-bs-toggle="modal" data-bs-target="#modal01" class="link">서비스 이용약관 동의</a> (필수)
-                    </label>
-                    <label class="checkboxLabel">
-                        <input type="checkbox"><i class="icon"></i>
-                        <a data-bs-toggle="modal" data-bs-target="#modal01" class="link">개인정보 수집 및 이용 동의</a> (필수)
-                    </label>
+                <div class="formWrap gap16" style="padding-top: 0;">
+                    <div class="labelInput">
+                        <div class="label">소속</div>
+                        <div class="flex">
+                            <input type="text" placeholder="소속">
+                        </div>
+                    </div>
+                    <div class="labelInput">
+                        <div class="label">직급</div>
+                        <div class="flex">
+                            <input type="text" placeholder="직급">
+                        </div>
+                    </div>
+                    <div class="labelInput">
+                        <div class="label">주요 분야</div>
+                        <div class="appendItem">
+                            <div class="btn-group" data-bs-toggle="dropdown" aria-expanded="false">
+                                <button class="btn--primary">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                        <path d="M8.00065 3.33325V12.6666M3.33398 7.99992H12.6673" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                    더 추가
+                                </button>
+                                <div class="itemList dropdown-menu">
+                                    <div class="itemList-item"><div class="tit">기술 / 제품 분류 / 업종</div></div>
+                                    <div class="itemList-item"><label>IT</label></div>
+                                    <div class="itemList-item"><label>교육</label></div>
+                                    <div class="itemList-item"><label>금융</label></div>
+                                    <div class="itemList-item"><label>내부사업/운영관리</label></div>
+                                    <div class="itemList-item"><label>네트워킹</label></div>
+                                    <div class="itemList-item"><label class="ac">MCN</label></div>
+                                    <div class="itemList-item"><label>농축수산업</label></div>
+                                    <div class="itemList-item"><label>라이프 스타일</label></div>
+                                    <div class="itemList-item"><label>마케팅/PR</label></div>
+                                    <div class="itemList-item"><label>모빌리티</label></div>
+                                    <div class="itemList-item"><label>미디어/엔터테인먼트</label></div>
+                                    <div class="itemList-item"><label>바이오/의료</label></div>
+                                    <div class="itemList-item"><label class="ac">SNS/커뮤니티</label></div>
+                                    <div class="itemList-item"><label>농축수산업</label></div>
+                                    <div class="itemList-item"><label>에너지</label></div>
+                                    <div class="itemList-item"><label>유통/물류</label></div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <span>SNS/커뮤니티</span>
+                                <button class="remove">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
+                                        <path d="M9 3L3 9M3 3L9 9" stroke="#36363F" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="item">
+                                <span>MCN</span>
+                                <button class="remove">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
+                                        <path d="M9 3L3 9M3 3L9 9" stroke="#36363F" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="borderWrap">
+                        <div>
+                            <h3>심사역 인증 </h3>
+                            <div class="desc">
+                                명함의 앞면과 뒷면 이미지를 업로드하여 인증을 신청해 주세요. 심사역으로 인증 후 IR 조회가 가능합니다.
+                            </div>
+                        </div>
+
+                        <div class="input--file2">
+                            <h4>앞면</h4>
+                            <div class="flex">
+                                <label>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                        <path d="M12 5V19M5 12H19" stroke="#36363F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                    <input type="file" accept="image/*" onchange="loadFile(this)">
+                                </label>
+                                <div class="thumbImg" id="thumbImg">
+                                    <img src="./img/dummy_profile2.jpg" alt="appendFileImg">
+                                    <button class="delFile" onclick="removeFile()">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                            <path d="M7.99967 14.6666C11.6816 14.6666 14.6663 11.6818 14.6663 7.99992C14.6663 4.31802 11.6816 1.33325 7.99967 1.33325C4.31778 1.33325 1.33301 4.31802 1.33301 7.99992C1.33301 11.6818 4.31778 14.6666 7.99967 14.6666Z" fill="#36363F"/>
+                                            <path d="M9.99967 5.99992L5.99967 9.99992Z" fill="#36363F"/>
+                                            <path d="M5.99967 5.99992L9.99967 9.99992Z" fill="#36363F"/>
+                                            <path d="M10 6L6 10Z" fill="#36363F"/>
+                                            <path d="M6 6L10 10Z" fill="#36363F"/>
+                                            <path d="M10 6L6 10M6 6L10 10" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                                          </svg>
+                                    </button>
+                                </div>
+                            </div>
+                            <p>･ 5MB 이하의 .jpg, .png 업로드 가능합니다.</p>
+                        </div>
+
+                        <div class="input--file2">
+                            <h4>뒷면</h4>
+                            <div class="flex">
+                                <label>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                        <path d="M12 5V19M5 12H19" stroke="#36363F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                    <input type="file" accept="image/*" onchange="loadFile(this)">
+                                </label>
+                                <div class="thumbImg" id="thumbImg">
+                                    <img src="./img/dummy_profile2.jpg" alt="appendFileImg">
+                                    <button class="delFile" onclick="removeFile()">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                            <path d="M7.99967 14.6666C11.6816 14.6666 14.6663 11.6818 14.6663 7.99992C14.6663 4.31802 11.6816 1.33325 7.99967 1.33325C4.31778 1.33325 1.33301 4.31802 1.33301 7.99992C1.33301 11.6818 4.31778 14.6666 7.99967 14.6666Z" fill="#36363F"/>
+                                            <path d="M9.99967 5.99992L5.99967 9.99992Z" fill="#36363F"/>
+                                            <path d="M5.99967 5.99992L9.99967 9.99992Z" fill="#36363F"/>
+                                            <path d="M10 6L6 10Z" fill="#36363F"/>
+                                            <path d="M6 6L10 10Z" fill="#36363F"/>
+                                            <path d="M10 6L6 10M6 6L10 10" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                                          </svg>
+                                    </button>
+                                </div>
+                            </div>
+                            <p>･ 5MB 이하의 .jpg, .png 업로드 가능합니다.</p>
+                        </div>
+
+                        <script src="./js/imgAttatch.js"></script>
+                    </div>
+
                 </div>
 
-                <button class="btn--primary">휴대폰 본인인증하기</button>
+                <div class="btnWrap" style="margin-top: 34px;">
+                    <button class="btn--normal" style="flex: 0 0 100px;">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_14071_9744)">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M9.40628 4.46066C9.21884 4.2732 8.91491 4.2732 8.72747 4.46066L5.52747 7.66066C5.43745 7.75068 5.38688 7.87277 5.38688 8.00007C5.38688 8.12738 5.43745 8.24947 5.52747 8.33949L8.72747 11.5394C8.91491 11.727 9.21884 11.727 9.40628 11.5394C9.59374 11.352 9.59374 11.0481 9.40628 10.8607L6.5457 8.00007L9.40628 5.13949C9.59374 4.95203 9.59374 4.64812 9.40628 4.46066Z" fill="#7D7D8B"/>
+                            </g>
+                            <defs>
+                            <clipPath id="clip0_14071_9744">
+                            <rect width="16" height="16" fill="white"/>
+                            </clipPath>
+                            </defs>
+                        </svg>
+                        이전
+                    </button>
+                    <button class="btn--primary" disabled>가입하기</button>
+                </div>
             </div>
         </div>
     </div>
@@ -122,27 +250,6 @@
             <div class="copyright">Copyright ©2023-2024 Seedbridge All Right Reserved.</div>
         </div>
     </footer>
-
-    <!-- Modal -->
-    <div class="dfModal modal fade" id="modal01" tabindex="-1" aria-labelledby="modal01Label" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h1 class="modal-title" id="modal01Label">Title</h1>
-
-                    <button data-bs-dismiss="modal" aria-label="Close">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                            <path d="M18 6L6 18M6 6L18 18" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <p>Lorem ipsum dolor sit amet consectetur. Tincidunt non odio pellentesque ipsum felis tincidunt odio etiam id. Luctus tincidunt hac quis feugiat tellus sed vulputate lobortis cras. Orci sed curabitur platea sagittis. At sed nisl vel eleifend. Lorem ipsum dolor sit amet consectetur. Tincidunt non odio pellentesque ipsum felis tincidunt odio etiam id. Luctus tincidunt hac quis feugiat tellus sed vulputate lobortis cras. Orci sed curabitur platea sagittis. At sed nisl vel eleifend. Lorem ipsum dolor sit amet consectetur. Tincidunt non odio pellentesque ipsum felis tincidunt odio etiam id. Luctus tincidunt hac quis feugiat tellus sed vulputate lobortis cras. Orci sed curabitur platea sagittis. At sed nisl vel eleifend.</p>
-                    <p>Lorem ipsum dolor sit amet consectetur. Tincidunt non odio pellentesque ipsum felis tincidunt odio etiam id. Luctus tincidunt hac quis feugiat tellus sed vulputate lobortis cras. Orci sed curabitur platea sagittis. At sed nisl vel eleifend. Lorem ipsum dolor sit amet consectetur. Tincidunt non odio pellentesque ipsum felis tincidunt odio etiam id. Luctus tincidunt hac quis feugiat tellus sed vulputate lobortis cras. Orci sed curabitur platea sagittis. At sed nisl vel eleifend. Lorem ipsum dolor sit amet consectetur. Tincidunt non odio pellentesque ipsum felis tincidunt odio etiam id. Luctus tincidunt hac quis feugiat tellus sed vulputate lobortis cras. Orci sed curabitur platea sagittis. At sed nisl vel eleifend.</p>
-                </div>
-            </div>
-        </div>
-    </div>
 
     <!-- BOOTSTRAP -->
     <script src="./bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
