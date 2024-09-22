@@ -177,6 +177,7 @@ input {
 		height: 100%;
 		object-fit: cover;
 		box-sizing: border-box;
+		filter: brightness(0.98);
 	}
 }
 
@@ -624,6 +625,103 @@ input {
 		padding: 32px;
 		border-radius: var(--number-4, 4px);
 		border: 1px solid var(--white-E4E4E7, #E4E4E7);
+		.tit {
+			color: var(--greyscale-000000, #000);
+			font-family: Pretendard;
+			font-size: 20px;
+			font-style: normal;
+			font-weight: 600;
+			line-height: 160%; /* 32px */
+			letter-spacing: -0.4px;
+			margin: 0;
+		}
+		.profileWrap {
+			padding-left: 160px;
+			position: relative;
+			.imgWrap {
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 120px;
+				height: 120px;
+				border-radius: 50%;
+				overflow: hidden;
+			}
+			.cont + .cont {
+				margin-top: 24px;
+			}
+			.label {
+				color: var(--greyscale-A0A0AB, #A0A0AB);
+				font-family: Pretendard;
+				font-size: 14px;
+				font-style: normal;
+				font-weight: 600;
+				line-height: 160%; /* 22.4px */
+				letter-spacing: -0.28px;
+				margin-bottom: 4px;
+			}
+			.desc {
+				color: var(--greyscale-000000, #000);
+				font-family: Pretendard;
+				font-size: 14px;
+				font-style: normal;
+				font-weight: 500;
+				line-height: 164%; /* 22.96px */
+				letter-spacing: -0.28px;
+				li {
+					&::before {
+						content: '･ ';
+					}
+				}
+			}
+		}
+		.noData {
+			margin-top: 32px;
+			padding-bottom: 20px;
+			color: var(--greyscale-A0A0AB, #A0A0AB);
+			text-align: center;
+			font-family: Pretendard;
+			font-size: 14px;
+			font-style: normal;
+			font-weight: 500;
+			line-height: 20px; /* 142.857% */
+		}
+		.greenDesc {
+			color: var(--color-primary, #93C637);
+			font-family: Pretendard;
+			font-size: 14px;
+			font-style: normal;
+			font-weight: 500;
+			line-height: 160%; /* 22.4px */
+			margin-top: 16px;
+		}
+		.groupWrap {
+			display: flex;
+			flex-wrap: wrap;
+			gap: 16px 24px;
+		}
+		.group {
+			flex: 1 0 calc((100% - 24px) / 2);
+			.label {
+				color: var(--greyscale-A0A0AB, #A0A0AB);
+				font-family: Pretendard;
+				font-size: 14px;
+				font-style: normal;
+				font-weight: 600;
+				line-height: 160%; /* 22.4px */
+				letter-spacing: -0.28px;
+				margin-bottom: 4px;
+			}
+			.value {
+				color: var(--greyscale-000000, #000);
+				font-family: Pretendard;
+				font-size: 14px;
+				font-style: normal;
+				font-weight: 500;
+				line-height: 164%; /* 22.96px */
+				letter-spacing: -0.28px;
+			}
+		}
 		.terms {
 			h3 {
 				color: var(--greyscale-000000, #000);
@@ -1396,6 +1494,34 @@ input {
 		height: 32px;
 		padding: 6px 8px;
 	}
+	&.big {
+		height: 48px;
+	}
+}
+.btn--deep {
+	display: inline-flex;
+	height: 40px;
+	padding: 8px 16px;
+	justify-content: center;
+	align-items: center;
+	gap: 8px;
+	flex-shrink: 0;
+	font-family: Pretendard;
+	font-size: 14px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: 20px; /* 142.857% */
+	border-radius: var(--radius-xs, 4px);
+	transition: 0.2s;
+	background: var(--greenscale-353F3F, #353F3F);
+	color: #fff;
+	&:hover {
+		background: var(--greenscale-1E2424, #1E2424);
+	}
+	&:disabled {
+		color: var(--white-E4E4E7, #E4E4E7);
+		background: var(--greyscale-C3C3CA, #C3C3CA);
+	}
 }
 .btn--normal {
 	display: inline-flex;
@@ -1873,14 +1999,6 @@ footer {
 		color: var(--greyscale-5B5B67, #5B5B67);
 		opacity: 0.5;
 	}
-}
-
-
-
-.flex {
-	display: flex;
-	align-items: center;
-	gap: 4px;
 }
 
 .labelInput {
@@ -2602,6 +2720,46 @@ footer {
 					}
 				}
 			}
+		}
+	}
+}
+
+.dfModal.modifyModal {
+	.modal-content {
+		padding: 40px;
+	}
+	.modal-header h1 {
+		color: var(--greyscale-000000, #000);
+		font-size: 20px;
+		font-style: normal;
+		font-weight: 700;
+		line-height: 150%; /* 30px */
+		letter-spacing: -0.4px;
+	}
+	.modal-body {
+		padding-top: 32px;
+		gap: 40px;
+	}
+	.component--form .top {
+		h3 {
+			color: var(--greyscale-000000, #000);
+			font-family: Pretendard;
+			font-size: 16px;
+			font-style: normal;
+			font-weight: 700;
+			line-height: 160%; /* 25.6px */
+		}
+	}
+	.modal-header button {
+		top: 32px;
+		right: 32px;
+	}
+	.modal-footer {
+		padding-top: 32px;
+		gap: 10px;
+		button {
+			flex: 1 0 0;
+			margin: 0;
 		}
 	}
 }

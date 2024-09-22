@@ -112,6 +112,7 @@ input {
   -o-object-fit: cover;
      object-fit: cover;
   box-sizing: border-box;
+  filter: brightness(0.98);
 }
 
 .flex {
@@ -568,6 +569,101 @@ input {
   padding: 32px;
   border-radius: var(--number-4, 4px);
   border: 1px solid var(--white-E4E4E7, #E4E4E7);
+}
+.contents .borderBox .tit {
+  color: var(--greyscale-000000, #000);
+  font-family: Pretendard;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 160%; /* 32px */
+  letter-spacing: -0.4px;
+  margin: 0;
+}
+.contents .borderBox .profileWrap {
+  padding-left: 160px;
+  position: relative;
+}
+.contents .borderBox .profileWrap .imgWrap {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.contents .borderBox .profileWrap .cont + .cont {
+  margin-top: 24px;
+}
+.contents .borderBox .profileWrap .label {
+  color: var(--greyscale-A0A0AB, #A0A0AB);
+  font-family: Pretendard;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 160%; /* 22.4px */
+  letter-spacing: -0.28px;
+  margin-bottom: 4px;
+}
+.contents .borderBox .profileWrap .desc {
+  color: var(--greyscale-000000, #000);
+  font-family: Pretendard;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 164%; /* 22.96px */
+  letter-spacing: -0.28px;
+}
+.contents .borderBox .profileWrap .desc li::before {
+  content: "･ ";
+}
+.contents .borderBox .noData {
+  margin-top: 32px;
+  padding-bottom: 20px;
+  color: var(--greyscale-A0A0AB, #A0A0AB);
+  text-align: center;
+  font-family: Pretendard;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px; /* 142.857% */
+}
+.contents .borderBox .greenDesc {
+  color: var(--color-primary, #93C637);
+  font-family: Pretendard;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 160%; /* 22.4px */
+  margin-top: 16px;
+}
+.contents .borderBox .groupWrap {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px 24px;
+}
+.contents .borderBox .group {
+  flex: 1 0 calc((100% - 24px) / 2);
+}
+.contents .borderBox .group .label {
+  color: var(--greyscale-A0A0AB, #A0A0AB);
+  font-family: Pretendard;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 160%; /* 22.4px */
+  letter-spacing: -0.28px;
+  margin-bottom: 4px;
+}
+.contents .borderBox .group .value {
+  color: var(--greyscale-000000, #000);
+  font-family: Pretendard;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 164%; /* 22.96px */
+  letter-spacing: -0.28px;
 }
 .contents .borderBox .terms h3 {
   color: var(--greyscale-000000, #000);
@@ -1341,6 +1437,35 @@ input {
   height: 32px;
   padding: 6px 8px;
 }
+[class*=btn--].big {
+  height: 48px;
+}
+
+.btn--deep {
+  display: inline-flex;
+  height: 40px;
+  padding: 8px 16px;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+  font-family: Pretendard;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px; /* 142.857% */
+  border-radius: var(--radius-xs, 4px);
+  transition: 0.2s;
+  background: var(--greenscale-353F3F, #353F3F);
+  color: #fff;
+}
+.btn--deep:hover {
+  background: var(--greenscale-1E2424, #1E2424);
+}
+.btn--deep:disabled {
+  color: var(--white-E4E4E7, #E4E4E7);
+  background: var(--greyscale-C3C3CA, #C3C3CA);
+}
 
 .btn--normal {
   display: inline-flex;
@@ -1892,12 +2017,6 @@ footer .mid div {
 footer .copyright {
   color: var(--greyscale-5B5B67, #5B5B67);
   opacity: 0.5;
-}
-
-.flex {
-  display: flex;
-  align-items: center;
-  gap: 4px;
 }
 
 .labelInput {
@@ -2664,6 +2783,42 @@ footer .copyright {
 }
 .dfModal.profileDetail .modal-dialog .modal-content .modal-body table td .flex {
   flex-wrap: wrap;
+}
+
+.dfModal.modifyModal .modal-content {
+  padding: 40px;
+}
+.dfModal.modifyModal .modal-header h1 {
+  color: var(--greyscale-000000, #000);
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 150%; /* 30px */
+  letter-spacing: -0.4px;
+}
+.dfModal.modifyModal .modal-body {
+  padding-top: 32px;
+  gap: 40px;
+}
+.dfModal.modifyModal .component--form .top h3 {
+  color: var(--greyscale-000000, #000);
+  font-family: Pretendard;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 160%; /* 25.6px */
+}
+.dfModal.modifyModal .modal-header button {
+  top: 32px;
+  right: 32px;
+}
+.dfModal.modifyModal .modal-footer {
+  padding-top: 32px;
+  gap: 10px;
+}
+.dfModal.modifyModal .modal-footer button {
+  flex: 1 0 0;
+  margin: 0;
 }
 
 .irEmpty {
