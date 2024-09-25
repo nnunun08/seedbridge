@@ -665,6 +665,16 @@ input {
   line-height: 164%; /* 22.96px */
   letter-spacing: -0.28px;
 }
+.contents .borderBox .group .value span + span::before {
+  content: "|";
+  color: var(--white-E4E4E7, #E4E4E7);
+  font-family: Pretendard;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px; /* 142.857% */
+  margin: 0 6px 0 4px;
+}
 .contents .borderBox .terms h3 {
   color: var(--greyscale-000000, #000);
   font-family: Pretendard;
@@ -706,7 +716,7 @@ input {
   font-style: normal;
   font-weight: 500;
   line-height: 160%; /* 22.4px */
-  padding: 4px;
+  padding: 4px 16px;
   width: 120px;
 }
 .contents .borderBox table td {
@@ -716,7 +726,14 @@ input {
   font-style: normal;
   font-weight: 600;
   line-height: 160%; /* 22.4px */
-  padding: 4px;
+  padding: 4px 16px;
+  color: var(--greyscale-7D7D8B, #7D7D8B);
+  font-family: Pretendard;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 164%; /* 22.96px */
+  letter-spacing: -0.28px;
 }
 .contents .borderBox .lineBtn {
   padding: 0;
@@ -990,6 +1007,14 @@ input {
   overflow: auto;
 }
 
+.component--grid h3 {
+  color: var(--greyscale-000000, #000);
+  font-family: Pretendard;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 160%; /* 25.6px */
+}
 .component--grid .nodata {
   height: 320px;
   text-align: center;
@@ -1182,7 +1207,8 @@ input {
   line-height: 164%; /* 22.96px */
   letter-spacing: -0.28px;
 }
-.component--download .tray .download {
+
+.download {
   width: 100%;
   display: flex;
   padding: 4px 12px;
@@ -1193,15 +1219,18 @@ input {
   border: 1px solid #E4E4E7;
   background: #FFF;
 }
-.component--download .tray .download + .download {
+.download svg {
+  flex: 0 0 auto;
+}
+.download + .download {
   margin-top: 8px;
 }
-.component--download .tray .download .flex {
+.download .flex {
   gap: 8px;
   flex: 1 0 0;
   max-width: 90%;
 }
-.component--download .tray .download .filename {
+.download .filename {
   color: #36363F;
   font-family: Pretendard;
   font-size: 14px;
@@ -1212,7 +1241,7 @@ input {
   text-overflow: ellipsis;
   overflow: hidden;
 }
-.component--download .tray .download .vol {
+.download .vol {
   color: #7A7F84;
   font-family: Pretendard;
   font-size: 12px;
@@ -1220,7 +1249,7 @@ input {
   font-weight: 400;
   line-height: 28px; /* 233.333% */
 }
-.component--download .tray .download .ic {
+.download .ic {
   width: 16px;
   height: 16px;
   background: url(../img/ic_download.svg) center no-repeat;
@@ -1458,6 +1487,7 @@ input {
   transition: 0.2s;
   background: var(--greenscale-353F3F, #353F3F);
   color: #fff;
+  box-sizing: border-box;
 }
 .btn--deep:hover {
   background: var(--greenscale-1E2424, #1E2424);
@@ -1465,6 +1495,7 @@ input {
 .btn--deep:disabled {
   color: var(--white-E4E4E7, #E4E4E7);
   background: var(--greyscale-C3C3CA, #C3C3CA);
+  border: 0;
 }
 
 .btn--normal {
@@ -1525,6 +1556,7 @@ input {
   font-weight: 700;
   line-height: 160%; /* 28.8px */
   letter-spacing: -0.36px;
+  box-shadow: none;
 }
 .component--evaluation .accordion-button .numRound {
   margin: 0;
@@ -1727,12 +1759,12 @@ input {
   padding-top: 1px;
   letter-spacing: -0.24px;
   border-radius: var(--radius-rounded-full, 9999px);
-  background: var(--color-DCF8D9, #DCF8D9);
-}
-.rBadge.line {
-  background-color: transparent;
   border: 1px solid var(--color-primary, #93C637);
-  color: var(--color-primary, #93C637);
+  box-sizing: border-box;
+}
+.rBadge.grey {
+  border: 1px solid var(--greyscale-C3C3CA, #C3C3CA);
+  color: var(--greyscale-C3C3CA, #C3C3CA);
 }
 
 .layout--login {
@@ -2808,6 +2840,45 @@ footer .copyright {
   font-weight: 700;
   line-height: 160%; /* 25.6px */
 }
+.dfModal.modifyModal .labelInput .label {
+  color: var(--greyscale-000000, #000);
+  font-family: Pretendard;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 160%; /* 25.6px */
+}
+.dfModal.modifyModal .labelInput .req {
+  color: var(--color-primary, #93C637);
+  font-family: Pretendard;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 160%; /* 25.6px */
+}
+.dfModal.modifyModal .inputWrap {
+  margin-top: 4px;
+  position: relative;
+}
+.dfModal.modifyModal .inputWrap .legend {
+  position: absolute;
+  top: 50%;
+  right: 12px;
+  transform: translateY(-50%);
+  overflow: hidden;
+  color: var(--greyscale-7D7D8B, #7D7D8B);
+  text-overflow: ellipsis;
+  font-family: Pretendard;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 160%; /* 22.4px */
+  letter-spacing: -0.28px;
+}
+.dfModal.modifyModal .inputWrap input {
+  text-align: right;
+  padding-right: 30px;
+}
 .dfModal.modifyModal .modal-header button {
   top: 32px;
   right: 32px;
@@ -3007,6 +3078,10 @@ footer .copyright {
 }
 .component--form .top h3 {
   margin: 0;
+}
+.component--form .top .req {
+  flex: 1 0 0;
+  margin-left: 4px;
 }
 .component--form .file {
   margin-top: 16px;
@@ -3337,4 +3412,18 @@ footer .copyright {
   width: 16px;
   height: 16px;
   background: url(../img/ic_arrow_right.png) center/cover no-repeat;
+}
+
+.commandBtn {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  width: 100vw;
+  padding: 16px 40px;
+  display: flex;
+  justify-content: flex-end;
+  border-top: 1px solid var(--white-E4E4E7, #E4E4E7);
+  background: #FFF;
+  z-index: 1;
 }/*# sourceMappingURL=style.css.map */
