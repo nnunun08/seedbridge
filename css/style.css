@@ -62,6 +62,10 @@ body:has(.layout--conetnts) {
   min-width: 1440px;
 }
 
+:focus-visible {
+  outline: none;
+}
+
 textarea {
   resize: none;
 }
@@ -400,6 +404,15 @@ input {
 .contents.full .layout--dual .layout--side {
   width: 590px;
 }
+.contents .pageBackArr {
+  margin-right: 10px;
+  border: 0;
+  background-color: transparent;
+  padding: 0;
+}
+.contents .pageBackArr svg {
+  margin-top: -5px;
+}
 .contents .pageBack {
   padding-left: 42px;
   position: relative;
@@ -566,9 +579,18 @@ input {
   margin-top: 24px;
 }
 .contents .borderBox {
+  position: relative;
   padding: 32px;
   border-radius: var(--number-4, 4px);
   border: 1px solid var(--white-E4E4E7, #E4E4E7);
+}
+.contents .borderBox .terms .numRound {
+  display: inline-flex;
+  margin: 0;
+}
+.contents .borderBox .pageBtn {
+  top: 32px;
+  right: 32px;
 }
 .contents .borderBox .tit {
   color: var(--greyscale-000000, #000);
@@ -711,6 +733,7 @@ input {
 }
 .contents .borderBox table th {
   color: var(--greyscale-A0A0AB, #A0A0AB);
+  color: var(--greyscale-222228, #222228);
   font-family: Pretendard;
   font-size: 14px;
   font-style: normal;
@@ -768,6 +791,8 @@ input {
   display: flex;
   gap: 4px;
   align-items: center;
+  justify-content: flex-end;
+  text-align: right;
   font-family: Pretendard;
   font-size: 14px;
   font-style: normal;
@@ -786,6 +811,8 @@ input {
   display: flex;
   gap: 4px;
   align-items: center;
+  justify-content: flex-end;
+  text-align: right;
   font-family: Pretendard;
   font-size: 14px;
   font-style: normal;
@@ -804,6 +831,8 @@ input {
   display: flex;
   gap: 4px;
   align-items: center;
+  justify-content: flex-end;
+  text-align: right;
   font-family: Pretendard;
   font-size: 14px;
   font-style: normal;
@@ -1457,6 +1486,14 @@ input {
 .btn--primary:disabled {
   color: var(--white-E4E4E7, #E4E4E7);
   background: var(--greyscale-C3C3CA, #C3C3CA);
+}
+.btn--primary:disabled .arr {
+  opacity: 0.5;
+}
+.btn--primary .arr {
+  width: 16px;
+  height: 16px;
+  background: url(../img/ic_btn_arr.png) center/cover no-repeat;
 }
 
 [class*=btn--].small {
@@ -2164,6 +2201,10 @@ footer .copyright {
   font-weight: 600;
   line-height: 160%; /* 22.4px */
   letter-spacing: -0.28px;
+}
+.labelWrap a {
+  color: var(--greyscale-000000, #000);
+  text-decoration-line: underline;
 }
 
 .input--file {
@@ -3070,6 +3111,76 @@ footer .copyright {
   line-height: 160%; /* 25.6px */
 }
 
+.component--form .dualLayoutAdd {
+  margin-top: 16px;
+  width: 100%;
+  border-radius: var(--number-4, 4px);
+  border: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  height: 40px;
+  background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' stroke='%23C3C3CAFF' stroke-width='1' stroke-dasharray='4' stroke-dashoffset='4' stroke-linecap='square'/%3e%3c/svg%3e");
+  background-color: transparent;
+}
+.component--form .marketRowWrap .input--file2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 62px;
+  height: 62px;
+}
+.component--form .marketRowWrap .input--file2 label {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  padding: 0;
+  background: none;
+}
+.component--form .marketRowWrap .input--file2 .thumbImg {
+  width: 62px;
+  height: 62px;
+}
+.component--form .marketRowWrap .input--file2 .thumbImg img {
+  border: 1px solid var(--white-E4E4E7, #E4E4E7);
+  border-radius: 999px;
+  width: 100%;
+  height: 100%;
+}
+.component--form .marketRowWrap .input--file2 .thumbImg .delFile {
+  display: block;
+  top: -5px;
+  right: -3px;
+}
+.component--form .marketRowWrap .marketRow + .marketRow {
+  margin-top: 16px;
+}
+.component--form .marketRowWrap .marketRow .flex {
+  align-items: flex-end;
+  gap: 8px;
+}
+.component--form .marketRowWrap .marketRow .flex select {
+  width: 100%;
+}
+.component--form .marketRowWrap .marketRow .del {
+  border-radius: var(--number-8, 8px);
+  background: var(--white-F7F8F9, #F7F8F9);
+  border: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 32px;
+  height: 32px;
+  margin-bottom: 2px;
+}
+.component--form .dualLayout {
+  position: relative;
+  margin-bottom: 16px;
+}
+.component--form .dualLayout .right {
+  padding-left: 86px;
+}
 .component--form .top {
   display: flex;
   justify-content: space-between;
@@ -3082,6 +3193,7 @@ footer .copyright {
 .component--form .top .req {
   flex: 1 0 0;
   margin-left: 4px;
+  color: var(--color-primary);
 }
 .component--form .file {
   margin-top: 16px;
@@ -3219,7 +3331,7 @@ footer .copyright {
   margin-top: 8px;
 }
 .component--form .marketRow .label {
-  color: var(--greyscale-A0A0AB, #A0A0AB);
+  color: var(--greyscale-6E6E7D, #6E6E7D);
   font-family: Pretendard;
   font-size: 14px;
   font-style: normal;

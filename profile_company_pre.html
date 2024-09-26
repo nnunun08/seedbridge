@@ -110,47 +110,31 @@
                 <div class="flex between" style="margin-bottom: 32px;">
                     <div class="flex gap8">
                         <h3 class="tit">사업자 정보</h3>
-                        <div class="rBadge">초기창업자</div>
-                        <div class="rBadge">인증완료</div>
-                        <div class="rBadge grey">인증 요청 필요</div>
-                        <div class="rBadge grey">인증대기중</div>
+                        <div class="rBadge">예비창업자</div>
                     </div>
                     <div class="pageBtn">
                         <!-- 케이스에 따라 노출 -->
-                        <button class="btn--primary" data-bs-toggle="modal" data-bs-target="#certification">인증 요청 신청</button>
+                        <button class="btn--primary" data-bs-toggle="modal" data-bs-target="#conversion">초기창업자로 전환 요청</button>
+                        <!-- <button class="btn--primary" disabled>초기창업자로 전환 요청</button>
+                        <div class="pageStatus--ing">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                <path d="M2 8C2 9.18669 2.35189 10.3467 3.01118 11.3334C3.67047 12.3201 4.60754 13.0892 5.7039 13.5433C6.80026 13.9974 8.00666 14.1162 9.17054 13.8847C10.3344 13.6532 11.4035 13.0818 12.2426 12.2426C13.0818 11.4035 13.6532 10.3344 13.8847 9.17054C14.1162 8.00666 13.9974 6.80026 13.5433 5.7039C13.0892 4.60754 12.3201 3.67047 11.3334 3.01118C10.3467 2.35189 9.18669 2 8 2C6.32263 2.00631 4.71265 2.66082 3.50667 3.82667L2 5.33333M2 5.33333V2M2 5.33333H5.33333M8 4.66667V8L10.6667 9.33333" stroke="#93C637" stroke-linecap="round" stroke-linejoin="round"></path>
+                            </svg>
+                            <b>심사중</b>
+                        </div> -->
                     </div>
                 </div>
                 <div class="groupWrap">
                     <div class="group">
-                        <div class="label">회사이름</div>
+                        <div class="label">팀명</div>
                         <div class="value">빠더너스</div>
-                    </div>
-                    <div class="group">
-                        <div class="label">사업자 등록 번호</div>
-                        <div class="value">1234512345</div>
-                    </div>
-                    <div class="group">
-                        <div class="label">설립일</div>
-                        <div class="value">2024-02-02</div>
                     </div>
                     <div class="group">
                         <div class="label">대표</div>
                         <div class="value">문상훈</div>
                     </div>
                     <div class="group">
-                        <div class="label">사업자 등록증</div>
-                        <!-- <div class="value">문상훈</div> -->
-                        <a href="" download="빠더너스_IRDeck_V1.0_240809.pdf" class="download" style="width: 420px;">
-                            <div class="flex">
-                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M9.33332 1.33333V5.33333H13.3333M10.6667 8.66666H5.33332M10.6667 11.3333H5.33332M6.66666 6H5.33332M9.66666 1.33333H3.99999C3.64637 1.33333 3.30723 1.47381 3.05718 1.72386C2.80713 1.9739 2.66666 2.31304 2.66666 2.66667V13.3333C2.66666 13.687 2.80713 14.0261 3.05718 14.2761C3.30723 14.5262 3.64637 14.6667 3.99999 14.6667H12C12.3536 14.6667 12.6928 14.5262 12.9428 14.2761C13.1928 14.0261 13.3333 13.687 13.3333 13.3333V5L9.66666 1.33333Z" stroke="#93C637" stroke-linecap="round" stroke-linejoin="round"></path>
-                                </svg>
-                                <div class="filename">빠더너스_IRDeck_V1.0_240809.pdf</div>
-                                <div class="vol">1MB</div>
-                            </div>
-                            <div class="ic">download-icon</div>
-                        </a>
-                        <div class="greenDesc" style="margin-top: 4px;">*사업자 정보 변경은 시드브릿지 1:1 문의를 통해서만 요청 가능합니다.</div>
+                        <div class="greenDesc" style="margin-top: 0px;">*사업자 정보 변경은 시드브릿지 1:1 문의를 통해서만 요청 가능합니다.</div>
                     </div>
                 </div>
             </div>
@@ -184,12 +168,8 @@
                     <div class="contWrap">
                         <div class="groupWrap">
                             <div class="group" style="flex-basis: 100%;">
-                                <div class="label">회사 한줄 소개</div>
+                                <div class="label">팀 한줄 소개</div>
                                 <div class="value">하이퍼 리얼리즘의 콩트와 코미디 영상을 만듭니다 웰메이드 코미디를 지향합니다.</div>
-                            </div>
-                            <div class="group">
-                                <div class="label">회사 홈페이지</div>
-                                <div class="value">www.bdns.com</div>
                             </div>
                             <div class="group">
                                 <div class="label">주소</div>
@@ -259,58 +239,16 @@
                 </div>
             </div>
 
-            <div class="borderBox" style="margin-top: 40px;">
-                <div class="flex between" style="margin-bottom: 32px;">
-                    <div class="flex gap8">
-                        <h3 class="tit">재무 및 투자 정보</h3>
-                    </div>
-                    <button class="btn--primary" data-bs-toggle="modal" data-bs-target="#modifyFinance">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
-                            <path d="M7.33301 2.66665H2.66634C2.31272 2.66665 1.97358 2.80713 1.72353 3.05718C1.47348 3.30723 1.33301 3.64637 1.33301 3.99999V13.3333C1.33301 13.6869 1.47348 14.0261 1.72353 14.2761C1.97358 14.5262 2.31272 14.6667 2.66634 14.6667H11.9997C12.3533 14.6667 12.6924 14.5262 12.9425 14.2761C13.1925 14.0261 13.333 13.6869 13.333 13.3333V8.66666M12.333 1.66665C12.5982 1.40144 12.9579 1.25244 13.333 1.25244C13.7081 1.25244 14.0678 1.40144 14.333 1.66665C14.5982 1.93187 14.7472 2.29158 14.7472 2.66665C14.7472 3.04173 14.5982 3.40144 14.333 3.66665L7.99967 9.99999L5.33301 10.6667L5.99967 7.99999L12.333 1.66665Z" stroke="#FAFAFA" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                        수정하기
-                    </button>
-                </div>
-                <div class="groupWrap">
-                    <div class="group">
-                        <div class="label">자본금</div>
-                        <div class="value">1,000만원</div>
-                    </div>
-                    <div class="group">
-                        <div class="label">현재 투자 라운드</div>
-                        <div class="value">Pre-A</div>
-                    </div>
-                    <div class="group">
-                        <div class="label">누적 투자 유치금액</div>
-                        <div class="value">3억</div>
-                    </div>
-                    <div class="group">
-                        <div class="label">희망 투자 유치금액</div>
-                        <div class="value">30억</div>
-                    </div>
-                    <div class="group">
-                        <div class="label">희망 포스트 밸류</div>
-                        <div class="value">300억</div>
-                    </div>
-                    <div class="group">
-                        <div class="label">매출 현황</div>
-                        <div class="value">
-                            <span>2023년 : 2억</span>
-                            <span>2022년 : 0.5억</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
         </div>
 
     </div>
 
-    <!-- certification -->
-    <div class="dfModal modal fade" id="certification" tabindex="-1" aria-labelledby="certificationLabel" aria-hidden="true">
+    <!-- conversion -->
+    <div class="dfModal modal fade" id="conversion" tabindex="-1" aria-labelledby="conversionLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered" style="width: 460px;">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h1 class="modal-title" id="certificationLabel">인증 요청 신청</h1>
+                    <h1 class="modal-title" id="conversionLabel">초기창업자로 전환 요청</h1>
                     <button data-bs-dismiss="modal" aria-label="Close">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                             <path d="M18 6L6 18M6 6L18 18" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
@@ -332,7 +270,7 @@
                         </div>
                     </div>
                     <div class="labelInput">
-                        <div class="label">사업자 등록 번호</div>
+                        <div class="label">사업자 등록증 업로드</div>
                         <div class="flex">
                             <div class="input--file" style="width: 100%;">
                                 <label for="file" class="btn--file">파일선택</label>
@@ -368,8 +306,6 @@
         </div>
     </div>
 
-
-    
 
 
     <!-- modifyProfile -->
@@ -421,17 +357,10 @@
                     </div>
                     <div class="component--form">
                         <div class="top">
-                            <h3>회사 한줄 소개</h3>
+                            <h3>팀 한줄 소개</h3>
                         </div>
                         <textarea placeholder="주소" style="height: 80px; margin-bottom: 0;"></textarea>
                         <div class="count"><span>0</span>/1000자</div>
-                    </div>
-
-                    <div class="component--form">
-                        <div class="top">
-                            <h3>회사 홈페이지</h3>
-                        </div>
-                        <input type="text" placeholder="홈페이지">
                     </div>
 
                     <div class="component--form">
@@ -635,126 +564,8 @@
         </div>
     </div>
 
-    <!-- modifyFinance -->
-    <div class="dfModal modifyModal modal fade" id="modifyFinance" tabindex="-1" aria-labelledby="modifyFinanceLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered" style="width: 800px;">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h1 class="modal-title" id="modifyFinanceLabel">재무 및 투자정보 수정</h1>
-                    <button data-bs-dismiss="modal" aria-label="Close">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
-                            <path d="M24 8L8 24M8 8L24 24" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                    </button>
-                </div>
-                <div class="modal-body">
-
-                    <div class="component--form">
-                        <div class="marketRowWrap">
-                            <div class="marketRow">
-                                <div class="flex">
-                                    <div style="flex: 1 0 0">
-                                        <div class="label">자본금</div>
-                                        <div class="inputWrap"><input type="text"><span class="legend">원</span></div>
-                                    </div>
-                                    <div style="flex: 1 0 0">
-                                        <div class="label">현재 투자 라운드 </div>
-                                        <select>
-                                            <option value="선택">선택</option>
-                                        </select>
-                                    </div>
-                                    <div style="flex: 1 0 0">
-                                        <div class="label">누적 투자 유치 금액</div>
-                                        <div class="inputWrap"><input type="text"><span class="legend">명</span></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="component--form">
-                        <div class="marketRowWrap">
-                            <div class="marketRow">
-                                <div class="flex">
-                                    <div style="flex: 1 0 0">
-                                        <div class="label">희망 투자유치 금액 </div>
-                                        <div class="inputWrap"><input type="text"><span class="legend">억원</span></div>
-                                    </div>
-                                    <div style="flex: 1 0 0">
-                                        <div class="label">희망 포스트 밸류</div>
-                                        <div class="inputWrap"><input type="text"><span class="legend">억원</span></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-
-                    <div class="component--form">
-                        <div class="top">
-                            <h3>매출 현황</h3>
-                        </div>
-                        <div class="marketRowWrap">
-                            <div class="marketRow">
-                                <div class="flex">
-                                    <div style="flex: 1 0 0">
-                                        <div class="label">연도</div>
-                                        <select>
-                                            <option value="선택">선택</option>
-                                        </select>
-                                    </div>
-                                    <div style="flex: 1 0 0">
-                                        <div class="label">매출액</div>
-                                        <div class="inputWrap"><input type="text"><span class="legend">명</span></div>
-                                    </div>
-                                    <button class="del">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
-                                            <path d="M2 4.00004H14M12.6667 4.00004V13.3334C12.6667 14 12 14.6667 11.3333 14.6667H4.66667C4 14.6667 3.33333 14 3.33333 13.3334V4.00004M5.33333 4.00004V2.66671C5.33333 2.00004 6 1.33337 6.66667 1.33337H9.33333C10 1.33337 10.6667 2.00004 10.6667 2.66671V4.00004M6.66667 7.33337V11.3334M9.33333 7.33337V11.3334" stroke="#36363F" stroke-linecap="round" stroke-linejoin="round"></path>
-                                        </svg>
-                                    </button>
-                                </div>
-                            </div>
-                            <div class="marketRow">
-                                <div class="flex">
-                                    <div style="flex: 1 0 0">
-                                        <div class="label">연도</div>
-                                        <select>
-                                            <option value="선택">선택</option>
-                                        </select>
-                                    </div>
-                                    <div style="flex: 1 0 0">
-                                        <div class="label">매출액</div>
-                                        <div class="inputWrap"><input type="text"><span class="legend">명</span></div>
-                                    </div>
-                                    <button class="del">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
-                                            <path d="M2 4.00004H14M12.6667 4.00004V13.3334C12.6667 14 12 14.6667 11.3333 14.6667H4.66667C4 14.6667 3.33333 14 3.33333 13.3334V4.00004M5.33333 4.00004V2.66671C5.33333 2.00004 6 1.33337 6.66667 1.33337H9.33333C10 1.33337 10.6667 2.00004 10.6667 2.66671V4.00004M6.66667 7.33337V11.3334M9.33333 7.33337V11.3334" stroke="#36363F" stroke-linecap="round" stroke-linejoin="round"></path>
-                                        </svg>
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                        <button class="dualLayoutAdd">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                                <path d="M12 5V19M5 12H19" stroke="#36363F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
-                            추가
-                        </button>
-                    </div>
-
-                </div>
-                <div class="modal-footer" style="border-top: 0;">
-                    <button class="btn--primary"  data-bs-toggle="modal" data-bs-target="#modify">저장</button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    
-
     <!-- BOOTSTRAP -->
     <script src="./bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-    
-    
+
 </body>
 </html>
