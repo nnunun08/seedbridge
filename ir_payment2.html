@@ -117,16 +117,115 @@
             <div class="pd16">
                 <div class="borderBox">
                     <div class="terms">
-                        
                         <h3 class="flex gap8"><span class="numRound">4</span>서비스를 선택해주세요.</h3>
+                        
+                        <ul class="nav nav-tabs serviceTab" id="serviceTab" role="tablist">
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link active" id="mentor" data-bs-toggle="tab" data-bs-target="#mentor-pane" type="button" role="tab" aria-controls="mentor-pane" aria-selected="true">
+                                    <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M19.666 25C19.666 23.4087 19.0339 21.8826 17.9087 20.7574C16.7834 19.6321 15.2573 19 13.666 19M13.666 19C12.0747 19 10.5486 19.6321 9.42337 20.7574C8.29816 21.8826 7.66602 23.4087 7.66602 25M13.666 19C15.8752 19 17.666 17.2091 17.666 15C17.666 12.7909 15.8752 11 13.666 11C11.4569 11 9.66602 12.7909 9.66602 15C9.66602 17.2091 11.4569 19 13.666 19ZM27.666 25C27.666 23.4087 27.0339 21.8826 25.9087 20.7574C24.7834 19.6321 23.2573 19 21.666 19C22.7269 19 23.7443 18.5786 24.4944 17.8284C25.2446 17.0783 25.666 16.0609 25.666 15C25.666 13.9391 25.2446 12.9217 24.4944 12.1716C23.7443 11.4214 22.7269 11 21.666 11" stroke="#7A8B8B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                    멘토링
+                                </button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="finance" data-bs-toggle="tab" data-bs-target="#finance-pane" type="button" role="tab" aria-controls="finance-pane" aria-selected="false" tabindex="-1">
+                                    <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M21.666 14H15.666C15.1356 14 14.6269 14.2107 14.2518 14.5858C13.8767 14.9609 13.666 15.4696 13.666 16C13.666 16.5304 13.8767 17.0391 14.2518 17.4142C14.6269 17.7893 15.1356 18 15.666 18H19.666C20.1964 18 20.7052 18.2107 21.0802 18.5858C21.4553 18.9609 21.666 19.4696 21.666 20C21.666 20.5304 21.4553 21.0391 21.0802 21.4142C20.7052 21.7893 20.1964 22 19.666 22H13.666M17.666 24V12M27.666 18C27.666 23.5228 23.1889 28 17.666 28C12.1432 28 7.66602 23.5228 7.66602 18C7.66602 12.4772 12.1432 8 17.666 8C23.1889 8 27.666 12.4772 27.666 18Z" stroke="#7A8B8B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                    투자유치
+                                </button>
+                            </li>
+                        </ul>
+
+                        <div class="tab-content" id="serviceTabContent">
+                            <div class="tab-pane fade show active" id="mentor-pane" role="tabpanel" aria-labelledby="mentor" tabindex="0">
+                                <div class="serviceContent">
+                                    <div class="item">
+                                        <div class="labelWrap">
+                                            <div>
+                                                <div class="flex gap8" style="margin-bottom: 8px;">
+                                                    <h3>기본서비스</h3>
+                                                    <div class="rBadge">무료</div>
+                                                </div>
+                                                <p>
+                                                    • 시장조사 요약 리포트<br>
+                                                    • 경쟁사 요약 리포트
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="labelWrap">
+                                            <h3 style="margin-bottom: 8px;">추가옵션 A. IR평가</h3>
+                                            <label class="radioLabel">
+                                                <input type="radio" name="radio1" checked><i class="icon"></i>
+                                                <span>선택안함</span>
+                                            </label>
+                                            <label class="radioLabel">
+                                                <input type="radio" name="radio1"><i class="icon"></i>
+                                                <span>옵션1. IR 평가 - <b>점수 33,000원</b></span>
+                                            </label>
+                                            <label class="radioLabel">
+                                                <input type="radio" name="radio1"><i class="icon"></i>
+                                                <span>옵션2. IR 평가 - <b>피드백 55,000원</b></span>
+                                            </label>
+                                            <label class="radioLabel">
+                                                <input type="radio" name="radio1"><i class="icon"></i>
+                                                <span>옵션3. IR 평가 - <b>점수 + 피드백 65,000원</b></span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="labelWrap">
+                                            <h3 style="margin-bottom: 8px;">추가옵션 B. 파트너 심사역 미팅</h3>
+                                            <label class="radioLabel">
+                                                <input type="radio" name="radio2" checked><i class="icon"></i>
+                                                <span>선택안함</span>
+                                            </label>
+                                            <label class="radioLabel">
+                                                <input type="radio" name="radio2"><i class="icon"></i>
+                                                <span>옵션1. 파트너 심사역 1대1 미팅 + 일반심사역 5명 매칭 <b>165,000원</b></span>
+                                            </label>
+                                            <label class="radioLabel">
+                                                <input type="radio" name="radio2"><i class="icon"></i>
+                                                <span>옵션2. 파트너 심사역 1대1 미팅 2명 매칭 + 일반심사역 5명 매칭 <b>290,000원</b></span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="total">총 금액 : 0원</div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="finance-pane" role="tabpanel" aria-labelledby="finance" tabindex="0">
+                                <div class="serviceContent">
+                                    <div class="itemWrap">
+                                        <label class="labelWrap p24">
+                                            <label class="radioLabel">
+                                                <input type="radio" name="radio3"><i class="icon"></i>
+                                                <h4>Seed</h4>
+                                            </label>
+                                            <p>• IR 자료 작성 제공</p>
+                                        </label>
+                                        <label class="labelWrap p24">
+                                            <label class="radioLabel">
+                                                <input type="radio" name="radio3"><i class="icon"></i>
+                                                <h4>Advanced</h4>
+                                            </label>
+                                            <p>• IR 자료 작성 제공</p>
+                                        </label>
+                                    </div>
+                                    <p>제출하신 IR 자료를 기반으로 시드브릿지에서 투자유치 요청서 및 투심 보고서 작성 후 투자자에게 공유합니다.</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
 
 
                 <div class="btnWrap" style="margin-top: 24px; justify-content: flex-end;">
-                    <button style="flex:0 0 200px; justify-content: space-between;" class="btn--primary big" disabled>
-                        다음
+                    <button style="flex:0 0 200px; justify-content: space-between;" class="btn--primary big">
+                        주문하고 평가 요청하기
                         <i class="arr"></i>
                     </button>
                 </div>
