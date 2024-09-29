@@ -15,9 +15,9 @@
 </head>
 <body>
 
-    <!-- <div data-include-path="header.html"></div>  -->
+
     <div class="gnb">
-        <a href="#">
+        <a data-bs-toggle="modal" data-bs-target="#modal01">
             <svg width="141" height="34" viewBox="0 0 141 34" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <g clip-path="url(#clip0_14042_5544)">
                 <path d="M39.0183 13.8405H37.2024C37.0155 12.4302 35.7237 11.3523 33.6193 11.3523C31.515 11.3523 30.3044 12.2138 30.3044 13.4118C30.3044 14.7902 31.5475 15.3872 34.4277 15.9842C37.7427 16.6814 39.0711 17.9435 39.0711 19.9148C39.0711 22.3029 36.6986 23.7653 33.7046 23.7653C30.5603 23.7653 28.2894 22.0745 28.1025 19.5021H29.9184C30.1053 21.1129 31.5678 22.2548 33.8224 22.2548C35.8415 22.2548 37.2715 21.3412 37.2715 20.015C37.2715 18.5365 36.0446 17.9395 33.1156 17.3264C30.0688 16.6974 28.521 15.6156 28.521 13.4118C28.521 11.2081 30.7269 9.86182 33.7046 9.86182C36.6824 9.86182 38.8517 11.5206 39.0224 13.8446L39.0183 13.8405Z" fill="#231815"/>
@@ -89,38 +89,63 @@
     </div>
 
     <div class="layout--conetnts">
+        
         <div class="lnb">
             <ul>
-                <li class="ir ac"><a href="#">IR 자료</a></li>
-                <li class="company"><a href="#">회사 프로필 관리</a></li>
+                <li class="ir ac"><a data-bs-toggle="modal" data-bs-target="#modal01">IR 자료</a></li>
+                <li class="company"><a data-bs-toggle="modal" data-bs-target="#modal01">회사 프로필 관리</a></li>
             </ul>
             <ul>
-                <li class="info"><a href="#">기본 정보 관리</a></li>
-                <li class="payment"><a href="#">결제 내역</a></li>
+                <li class="info"><a data-bs-toggle="modal" data-bs-target="#modal01">기본 정보 관리</a></li>
+                <li class="payment"><a data-bs-toggle="modal" data-bs-target="#modal01">결제 내역</a></li>
             </ul>
         </div>
 
+
         <div class="contents">
-            <button class="btn--primary" data-bs-toggle="modal" data-bs-target="#modal01">사업자 인증이 완료되지 않았습니다.</button>
+            <div class="orderFinish">
+                <h2 class="s28" style="margin-bottom: 8px;">주문이 완료되었습니다</h2>
+                <p class="sub">시드브릿지에서 IR 테이블 확인 후 개별 연락드립니다.</p>
+                <div class="greyWrap">
+                    <h3>투자유치 - Seed</h3>
+                    <div class="conWrap">
+                        <div class="flex between">
+                            <div class="key">주문번호</div>
+                            <div class="value">202408090005</div>
+                        </div>
+                        <div class="flex between">
+                            <div class="key">주문일시</div>
+                            <div class="value">2024.08.09 12:34:56</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="btnWrap" style="margin-top: 24px; justify-content: flex-end;">
+                    <button style="flex:0 0 200px; justify-content: space-between;" class="btn--primary big">
+                        평가 요청 내역으로 이동
+                        <i class="arr"></i>
+                    </button>
+                </div>
+            </div>
         </div>
+
     </div>
 
-
-    <!-- alert -->
+    <!-- Modal -->
     <div class="dfModal modal fade" id="modal01" tabindex="-1" aria-labelledby="modal01Label" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered" style="width: 512px;">
+        <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h1 class="modal-title" id="modal01Label">사업자 인증이 완료되지 않았습니다.</h1>
+                    <h1 class="modal-title" id="modal01Label">Title</h1>
+
+                    <button data-bs-dismiss="modal" aria-label="Close">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path d="M18 6L6 18M6 6L18 18" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
                 </div>
-                <div class="modal-body" style="padding-top: 4px;">
-                    <p>
-                        사업자 인증이 완료되지 않아 평가 요청을 보낼 수 없습니다.<br>
-                        가입 후 영업일 3일이 지났는데도 인증이 완료되지 않은 경우, 1:1문의를 남겨주세요.
-                    </p>
-                </div>
-                <div class="modal-footer" style="border-top: 0;">
-                    <button class="btn--primary" data-bs-dismiss="modal" aria-label="Close">확인</button>
+                <div class="modal-body">
+                    <p>Lorem ipsum dolor sit amet consectetur. Tincidunt non odio pellentesque ipsum felis tincidunt odio etiam id. Luctus tincidunt hac quis feugiat tellus sed vulputate lobortis cras. Orci sed curabitur platea sagittis. At sed nisl vel eleifend. Lorem ipsum dolor sit amet consectetur. Tincidunt non odio pellentesque ipsum felis tincidunt odio etiam id. Luctus tincidunt hac quis feugiat tellus sed vulputate lobortis cras. Orci sed curabitur platea sagittis. At sed nisl vel eleifend. Lorem ipsum dolor sit amet consectetur. Tincidunt non odio pellentesque ipsum felis tincidunt odio etiam id. Luctus tincidunt hac quis feugiat tellus sed vulputate lobortis cras. Orci sed curabitur platea sagittis. At sed nisl vel eleifend.</p>
+                    <p>Lorem ipsum dolor sit amet consectetur. Tincidunt non odio pellentesque ipsum felis tincidunt odio etiam id. Luctus tincidunt hac quis feugiat tellus sed vulputate lobortis cras. Orci sed curabitur platea sagittis. At sed nisl vel eleifend. Lorem ipsum dolor sit amet consectetur. Tincidunt non odio pellentesque ipsum felis tincidunt odio etiam id. Luctus tincidunt hac quis feugiat tellus sed vulputate lobortis cras. Orci sed curabitur platea sagittis. At sed nisl vel eleifend. Lorem ipsum dolor sit amet consectetur. Tincidunt non odio pellentesque ipsum felis tincidunt odio etiam id. Luctus tincidunt hac quis feugiat tellus sed vulputate lobortis cras. Orci sed curabitur platea sagittis. At sed nisl vel eleifend.</p>
                 </div>
             </div>
         </div>
