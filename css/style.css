@@ -72,7 +72,6 @@ textarea {
 
 Select {
   font-family: inherit; /* 폰트 상속 */
-  background: url(../img/btn-drop-arrow.svg) no-repeat 98% 50%;
   /* 네이티브 화살표를 커스텀 화살표로 대체 */
   -webkit-appearance: none;
   /* 네이티브 외형 감추기 */
