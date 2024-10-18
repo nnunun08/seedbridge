@@ -198,6 +198,9 @@ input {
 	&.right {
 		justify-content: flex-end;
 	}
+	&.column {
+		flex-direction: column;
+	}
 }
 
 .gap4 {gap: 4px !important;}
@@ -2513,7 +2516,17 @@ body:has(.section--complated.fixed) {
 .table {
 	margin-bottom: 16px;
 	border: 1px solid var(--border-border-border, #E2E8F0);
+	&.fixed {
+		table-layout: fixed;
+	}
 	th {
+		color: var(--greyscale-000000, #000);
+		font-family: Pretendard;
+		font-size: 14px;
+		font-style: normal;
+		font-weight: 600;
+		line-height: 160%; /* 22.4px */
+		letter-spacing: -0.28px;
 		width: 160px;
 		height: 56px;
 		padding: 0 16px;
