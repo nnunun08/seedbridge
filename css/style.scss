@@ -1573,6 +1573,7 @@ input {
 	}
 }
 [class*="btn--"] {
+	cursor: pointer;
 	&.small {
 		height: 36px;
 	}
@@ -2058,6 +2059,7 @@ select {
 }
 
 .radioLabel {
+	cursor: pointer;
 	display: flex;
 	align-items: center;
 	gap: 8px;
