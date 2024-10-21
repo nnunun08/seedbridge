@@ -378,6 +378,67 @@ input {
   border-top: 1px solid #E4E4E7;
 }
 
+.emailForm {
+  text-align: center;
+  padding: 0 20px;
+  padding-top: 160px;
+}
+.emailForm h2 {
+  color: var(--greyscale-000000, #000);
+  text-align: center;
+  /* h4 */
+  font-family: Pretendard;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 160%; /* 32px */
+  letter-spacing: -0.4px;
+  margin-bottom: 40px;
+}
+.emailForm .info {
+  color: var(--greyscale-5B5B67, #5B5B67);
+  text-align: center;
+  font-family: Pretendard;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 160%; /* 25.6px */
+  letter-spacing: -0.32px;
+  margin-bottom: 20px;
+}
+.emailForm .email {
+  color: var(--greyscale-000000, #000);
+  text-align: center;
+  font-family: Pretendard;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 160%; /* 25.6px */
+  letter-spacing: -0.32px;
+  margin-bottom: 40px;
+}
+.emailForm .guide {
+  color: var(--greyscale-2C2C35, #2C2C35);
+  text-align: center;
+  font-family: Pretendard;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 160%; /* 22.4px */
+  letter-spacing: -0.28px;
+  margin: 0;
+}
+.emailForm a {
+  color: var(--color-primary, #93C637);
+  text-align: center;
+  font-family: Pretendard;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 160%; /* 22.4px */
+  text-decoration-line: underline;
+}
+
 .layout--conetnts {
   position: relative;
   min-height: calc(100vh - 64px);
