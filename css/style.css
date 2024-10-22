@@ -647,6 +647,38 @@ input {
   display: inline-flex;
   margin: 0;
 }
+.contents .borderBox td:has(.greyBx) {
+  padding-left: 0;
+  padding-right: 0;
+}
+.contents .borderBox .greyBx {
+  background: var(--white-F7F8F9, #F7F8F9);
+  border-radius: var(--number-4, 4px);
+  padding: var(--number-16, 16px);
+  display: flex;
+  padding: var(--number-16, 16px);
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 6px;
+  align-self: stretch;
+  line-height: 160%; /* 22.4px */
+  letter-spacing: -0.28px;
+  color: var(--greyscale-5B5B67, #5B5B67);
+  font-size: 14px;
+}
+.contents .borderBox .greyBx .flex {
+  width: 100%;
+}
+.contents .borderBox .greyBx .key2 {
+  font-weight: 500;
+}
+.contents .borderBox .greyBx .key2 b {
+  color: var(--greyscale-000000, #000);
+  font-weight: 700;
+}
+.contents .borderBox .greyBx .value {
+  font-weight: 600;
+}
 .contents .borderBox .pageBtn {
   top: 32px;
   right: 32px;
@@ -3798,6 +3830,14 @@ body:has(.section--complated.fixed) {
   border: 1px solid var(--white-E4E4E7, #E4E4E7);
   background: var(--white-F7F8F9, #F7F8F9);
   margin-bottom: 16px;
+  position: relative;
+}
+.greyWrap .status--complate {
+  position: absolute;
+  top: 23px;
+  right: 24px;
+  width: auto;
+  font-size: 12px;
 }
 .greyWrap h3 {
   color: var(--greyscale-000000, #000);
